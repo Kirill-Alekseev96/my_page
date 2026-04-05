@@ -1,0 +1,18 @@
+/*
+    Селектор :root ссылается на корневой элемент документа (<html>). 
+    Переменные, объявленные здесь, доступны глобально во всем проекте.
+    :root CSS селектор — указывает на <html> 
+*/
+
+:root {
+    --color-white:  #FFFFFF;
+    --color-black:  #032a2f;
+    --color-black-green: #2f3c42;
+    --color-orange-50: #f79236;
+    --color-orange: #cd5322;
+
+    --font-family-base: 'Manrope', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --text-uppercase-uppercase: uppercase;
+}

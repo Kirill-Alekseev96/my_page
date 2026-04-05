@@ -1,0 +1,37 @@
+@use '../../scss/mixins' as *;
+
+
+.header{
+
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-black);
+        padding: 20px;
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 10px 20px;
+    }
+
+    &__link {
+        text-transform: var(--text-uppercase-uppercase);
+    }
+
+    &__theme-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        flex-shrink:0;
+    }
+}
+
+

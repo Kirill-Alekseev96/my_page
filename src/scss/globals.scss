@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--color-black-green);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,h2,h3 {
+    font-weight: var(--font-weight-bold);
+    text-transform: var(--text-uppercase-uppercase);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--color-orange);
+    font-weight: var(--font-weight-bold);
+    text-transform: var(--text-uppercase-uppercase);
+    font-size: 40px;
+}
+
+h2 {
+    color: var(--color-orange);
+    font-weight: var(--font-weight-bold);
+    text-transform: var(--text-uppercase-uppercase);
+    font-size: 40px;
+}
+
+h3 {
+    color: var(--color-orange-50);
+    font-weight: var(--font-weight-bold);
+    text-transform: var(--text-uppercase-uppercase);
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skills__svg {
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,81 @@
+.slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 800px;
+    height: 800px;
+
+    &__container {
+        position: relative;  // важно!
+        width: 100%;
+        height: 100%;
+    }
+
+    &__container-button {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%); 
+        opacity: 0; // Полностью прозрачный
+        visibility: hidden; // Скрыт от взаимодействия
+        transition: all 0.3s ease;
+        /*
+            all - тип анимации (плавное ускорение/замедление)
+            0.3s - длительность анимации (0.3 секунды)
+            ease - какие свойства анимировать (все)
+        */
+    }
+
+    .slider__container:hover &__container-button {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 0; 
+        right: 0;
+        padding: 10px;
+        background: transparent;
+        border: none;
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+    }
+
+    &__close-button::before {
+        display: block;
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-color: #f79236;
+        mask: url('/icons/close.svg') no-repeat center/contain;
+        -webkit-mask: url('/icons/close.svg') no-repeat center/contain;
+    }   
+
+    .prev__button:before {
+        display: block;
+        content: '';
+        width: 80px;
+        height: 80px;
+        background-color: #f79236;
+        mask: url('/icons/arrow-left.svg') no-repeat center/contain;
+        -webkit-mask: url('/icons/arrow-left.svg') no-repeat center/contain;
+    }
+
+    .next__button:before {
+        display: block;
+        content: '';
+        width: 80px;
+        height: 80px;
+        background-color: #f79236;
+        mask: url('/icons/arrow-left.svg') no-repeat center/contain;
+        -webkit-mask: url('/icons/arrow-right.svg') no-repeat center/contain;
+    }
+}
