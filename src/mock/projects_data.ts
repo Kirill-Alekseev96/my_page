@@ -12,7 +12,7 @@ export const projectsData: projectsDataType[] = [
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: 'public/images/HTML_CSS_2.png',
+        src: '/images/HTML_CSS_2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
@@ -25,7 +25,7 @@ export const projectsData: projectsDataType[] = [
     id: '2',
     title: 'Заглушка',
     description: 'Заглушка',
-    previewImage: 'public/images/preview_html-css.jpg',
+    previewImage: '/images/preview_js.jpg',
     images: [
       { 
         src: 'public/images/inst_1.png',
@@ -45,7 +45,7 @@ export const projectsData: projectsDataType[] = [
     id: '3',
     title: 'Заглушка',
     description: 'Заглушка',
-    previewImage: 'public/images/preview_html-css.jpg',
+    previewImage: '/images/preview_html-css.jpg',
     images: [
       { 
         src: 'public/images/HTML_CSS_1.png',

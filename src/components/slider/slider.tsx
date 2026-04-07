@@ -33,7 +33,8 @@ export default function Slider ({project, onClose}:SliderProps) {
         <div className="slider">
 
              <div className="slider__container">
-                <div className="slider__wrap">
+                <div className="slider__container-inner">
+                    <div className="slider__wrap">
 
                     {images.map((image, index)=>(
                         <img className="slider__image" 
@@ -44,7 +45,7 @@ export default function Slider ({project, onClose}:SliderProps) {
                     ))}
 
                 </div>
-
+                </div>
                 <button onClick = {onClose} className="slider__close-button" aria-label="закрыть"></button>
                 <div className="slider__container-button">
                     <button onClick = {showPreviousSlide} className="prev__button slider__button" aria-label="Посмотреть предыдущий слайд"></button>

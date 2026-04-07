@@ -12,7 +12,20 @@
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        width: 600px;
+        width: 800px;
         background-color: rgb(255, 0, 0);
+    }
+
+    &__container-inner{
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+    }
+
+    &__modal {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        background-color: rgb(194, 180, 194);
     }
 }
