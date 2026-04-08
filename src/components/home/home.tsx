@@ -3,7 +3,11 @@ export default function Home () {
         <section className="home">
             <div className="home__content">
                 <h1 className="home__heading heading">Frontend Разработчик</h1>
-                <p className="home__description">Меня зовут Кирилл Алексеев, я frontend-разработчик создаю удобные и современные интерфейсы. Моя задача — превращать идеи в чистый, работающий код, который приносит пользу. Постоянно учусь новому и слежу за трендами, чтобы делать веб лучше и быстрее.</p>
+                <p className="home__description">
+                    Меня зовут Кирилл Алексеев, я frontend-разработчик.
+                    Cоздаю удобные и современные интерфейсы.<br/>
+                    Моя задача — превращать идеи в чистый, работающий код, который приносит пользу.<br/>
+                    Постоянно учусь новому и слежу за трендами, чтобы делать веб лучше и быстрее.</p>
                 <div className="home__actions">
                     <button className="home__button--download button">cкачать</button>
                     <button className="home__button--contact button">написать</button>

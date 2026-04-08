@@ -24,7 +24,7 @@ export default function Header () {
                     </ul>
                 </nav>
                 
-                <button className="header__theme-btn button button--dark"></button>
+                <button className="header__theme-btn button--dark"></button>
             </div>
         </header>
     )

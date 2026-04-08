@@ -6,22 +6,22 @@
      justify-content: space-between;
      flex-wrap: wrap;
      margin: 100px 0;
-     padding: 50px;
+     padding: 50px 0;
      
 
      &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-basis: 550px;
+        flex-basis: 650px;
         // background-color: red;
      }
 
      &__description {
         margin: 30px 0;
         justify-content: center;
-        // line-height: 20px;
-        font-size: 30px;
+        font-size: 25px;
+        line-height: 40px;
      }
 
     //  &__actions {
@@ -34,7 +34,6 @@
 
      .button {
         padding: 10px 30px;
-        border-radius: 25px;
      }
 
      &__inner {
@@ -42,13 +41,14 @@
         justify-content: center;
         align-items: center;
         padding: 10px;
+        margin: 50px 20px;
         border-radius: 50%;
         box-shadow: 0px 0px 60px 10px rgba(205,83,34, 10);
      }
 
      &__image{
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
         max-width: 100%;
         object-fit: cover;

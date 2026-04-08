@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     max-width: 1200px;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -26,12 +27,9 @@ body {
     font-family: var(--font-family-base);
     font-size: 16px;
     color: var(--color-white);
-    background-color: var(--color-black-green);
+    background-color: var(--color-black);
 }
 
-main {
-  flex-grow: 1;
-}
 
 h1,h2,h3 {
     font-weight: var(--font-weight-bold);
@@ -40,15 +38,29 @@ h1,h2,h3 {
     padding: 0;
 }
 
+h1,h2 {
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    -webkit-text-stroke: 1px var(--color-grey);
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--color-grey-50),
+        0 0 30px var(--color-grey-50),
+        0 0 50px var(--color-grey);
+}
+
 h1 {
-    color: var(--color-orange);
+    // color: #a200fa;
+    text-transform: var(--text-uppercase-uppercase);
+    font-size: 40px;
+    color: var(--color-white);
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
     font-size: 40px;
 }
 
 h2 {
-    color: var(--color-orange);
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
     font-size: 40px;
@@ -63,7 +75,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--color-black);
 }
 
 ul,
@@ -79,4 +91,26 @@ img {
 .skills__svg {
     width: 40px;
     height: 40px;
+}
+
+.button {
+    min-width: 200px;
+   
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: var(--color-grey);
+    background-color: #080a14;
+    box-shadow: 0 0 15px var(--color-grey-50), inset 0 0 15px var(--color-grey-50);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: var(--color-grey);
+    box-shadow: 0 0 20px var(--color-grey-50), 0 0 30px var(--color-grey-50);
+    color: #fff;
 }

@@ -9,8 +9,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--color-black);
-        padding: 20px;
+        background-color: var(--color-green-50);
+        box-shadow: 0px 0 5px 1px rgba(32, 32, 32, 0.5) inset;
+        padding: 0 20px;
     }
 
     &__list{
@@ -19,11 +20,13 @@
     }
 
     &__item {
-        padding: 10px 20px;
+        padding: 20px;
     }
 
     &__link {
         text-transform: var(--text-uppercase-uppercase);
+        font-weight: var(--font-weight-normal);
+        font-size: 16px;
     }
 
     &__theme-btn {
