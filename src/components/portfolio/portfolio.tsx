@@ -1,15 +1,15 @@
 import { useCallback, useState } from "react";
-import type { projectsDataType } from "../../types/type-data";
+import type { PortfolioDataType } from "../../types/type-data";
 import Slider from "../slider/slider";
 
-interface ProjectsProps {
-  projectsData: projectsDataType[];
+interface PortfolioProps {
+  projectsData: PortfolioDataType[];
 }
 
-export default function Projects({projectsData}:ProjectsProps) {
+export default function Portfolio({projectsData}:PortfolioProps) {
 
     const [isOpenSlider, setIsOpenSlider] = useState(false);
-    const [project, setProject] = useState<projectsDataType | null>(null);
+    const [project, setProject] = useState<PortfolioDataType | null>(null);
 
     const handleOpenSlider = useCallback((id:string) => {
         setIsOpenSlider(!isOpenSlider);
@@ -30,11 +30,11 @@ export default function Projects({projectsData}:ProjectsProps) {
     return(
         <section className="projects">
             <h2 className="projects__heading heading">Проекты</h2>
-            <ul className="projects__item">
+            <ul className="projects__list">
 
                 {projectsData.map((project) => (
                     <>
-                        <li>
+                        <li className="projects__item">
                             <img className="projects__image" onClick = {() => handleOpenSlider(project.id)} src={project.previewImage} alt={project.title} width={300} height={300}/>
                     
                             <div className="projects__content">

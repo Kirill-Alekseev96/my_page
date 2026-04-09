@@ -1,13 +1,13 @@
-export type ProjectsDataType = [ 
-    {
-        id: string;
-        title?: string;
-        description?: string;
-        images?: string[];
-    }
-]
+// export type ProjectsDataType = [ 
+//     {
+//         id: string;
+//         title?: string;
+//         description?: string;
+//         images?: string[];
+//     }
+// ]
 
-export type projectsDataType = {
+export type PortfolioDataType = {
     id: string;
     title: string;
     description: string;

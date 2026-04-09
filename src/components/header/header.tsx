@@ -10,7 +10,7 @@ export default function Header () {
                             <a className="header__link header__link--active" href="">Главная</a>
                         </li>
                         <li className="header__item">
-                            <a className="header__link" href="">Навыки</a>
+                            <a className="header__link" href="#skills">Навыки</a>
                         </li>
                         <li className="header__item">
                             <a className="header__link" href="">Проекты</a>

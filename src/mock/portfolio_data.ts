@@ -1,10 +1,10 @@
-import type { projectsDataType } from "../types/type-data";
+import type { PortfolioDataType } from "../types/type-data";
 
-export const projectsData: projectsDataType[] = [
+export const projectsData: PortfolioDataType[] = [
   {
     id: '1',
-    title: 'Заглушка',
-    description: 'Заглушка',
+    title: 'HTML/CSS',
+    description: 'Вёрстка и стилизация',
     previewImage: 'public/images/preview_html-css.jpg',
     images: [
       { 
@@ -23,8 +23,8 @@ export const projectsData: projectsDataType[] = [
   },
   {
     id: '2',
-    title: 'Заглушка',
-    description: 'Заглушка',
+    title: 'JS',
+    description: 'Интерактивность и логика',
     previewImage: '/images/preview_js.jpg',
     images: [
       { 
@@ -43,8 +43,8 @@ export const projectsData: projectsDataType[] = [
   },
   {
     id: '3',
-    title: 'Заглушка',
-    description: 'Заглушка',
+    title: 'JS + REACT + TS',
+    description: 'Компонентный подход и типизация',
     previewImage: '/images/preview_html-css.jpg',
     images: [
       { 

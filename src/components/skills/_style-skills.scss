@@ -1,15 +1,16 @@
 .skills {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 
     &__heading {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
         gap: 20px;
     }
@@ -19,9 +20,59 @@
         flex-direction: column;
         align-items: center;
         width: 350px;
+        padding: 10px;
+
+        border-radius: 25px;
+        background: rgba(var(--color-blue-rgb), 0.25);
+        box-shadow: 0 0 60px rgba(var(--color-blue-rgb), 0.7), 0 0 20px rgba(var(--color-blue-rgb), 0.5);
+        border: 1px solid rgba(var(--color-blue-rgb), 0.5);
+        overflow: hidden;
     }
 
     &__title {
-        margin: 10px 0;
+        margin: 20px 0;
+    }
+
+    &__item-inner {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__svg {
+
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+        background-color: var(--color-black);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        transition: background-color 0.3s ease;
+    }
+
+    &__list:hover &__svg {
+        transform: rotate(360deg);
+        background-color: var(--color-orange); 
+        transition: transform 0.5s ease;
+    }
+    
+    &__svg:not(:hover) {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    &__svg-html {
+        mask-image: url('/icons/html.svg');
+        -webkit-mask-image: url('/icons/html.svg');
+    }
+
+    &__svg-brackets {
+        mask-image: url('/icons/brackets.svg');
+        -webkit-mask-image: url('/icons/brackets.svg');
+    }
+
+    &__svg-setting {
+        mask-image: url('/icons/setting.svg');
+        -webkit-mask-image: url('/icons/setting.svg');
     }
 }

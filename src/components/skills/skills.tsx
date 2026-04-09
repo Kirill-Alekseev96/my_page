@@ -1,10 +1,11 @@
 export default function Skills () {
     return (
-        <section className="skills">
+        <section className="skills" id = "skills">
             <h2 className="skills__heading heading">Навыки</h2>
             <ul className="skills__list">
                 <li className="skills__item">
-                    <img src="public/icons/html.svg" alt="HTML/CSS" className="skills__svg" />
+                    <div className="skills__svg skills__svg-html"></div>
+                    {/* <img className="skills__svg" src="public/icons/html.svg" alt="HTML/CSS"/> */}
                     <h3 className="skills__title">HTML/CSS</h3>
                     <ul className="skills__list-inner">
                         <li className="skills__item-inner">
@@ -25,7 +26,7 @@ export default function Skills () {
                     </ul>
                 </li>
                 <li className="skills__item">
-                    <img src="public/icons/brackets.svg" alt="JS/React" className="skills__svg" />
+                    <div className="skills__svg skills__svg-brackets"></div>
                     <h3 className="skills__title">JavaScript & React</h3>
                     <ul className="skills__list-inner">
                         <li className="skills__item-inner">
@@ -46,8 +47,8 @@ export default function Skills () {
                     </ul>
                 </li>
                 <li className="skills__item">
-                    <img src="public/icons/seting.svg" alt="" className="skills__svg" />
-                    <h3 className="skills__title">Инструменты и подходы</h3>
+                    <div className="skills__svg skills__svg-setting"></div>
+                    <h3 className="skills__title">Инструменты</h3>
                     <ul className="skills__list-inner">
                         <li className="skills__item-inner">
                             Git (система контроля версий)
