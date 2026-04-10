@@ -4,13 +4,12 @@
 .header{
 
     width: 100%;
+    background-color: var(--color-black);
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: var(--color-grey-toxic);
-        box-shadow: 0 0 60px rgba(var(--color-grey-rgb), 0.7), 0 0 20px rgba(var(--color-grey-rgb), 0.5);
         padding: 0 20px;
     }
 
@@ -21,12 +20,23 @@
 
     &__item {
         padding: 30px;
+        transition: all 0.8s ease;
+        cursor: pointer;
+    }
+
+    &__item:hover {
+        background-color: var(--color-white);
+    }
+
+    &__item:hover &__link {
+        color: var(--color-black);   
     }
 
     &__link {
         text-transform: var(--text-uppercase-uppercase);
-        font-weight: var(--font-weight-bold);
-        font-size: 20px;
+        font-weight: var(--font-weight-normal);
+        font-size: 18px;
+        letter-spacing: 6px;
     }
 
     &__theme-btn {

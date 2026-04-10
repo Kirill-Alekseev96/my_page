@@ -15,9 +15,9 @@ function App() {
       <Header/>
       <main className='page__main'>
         <Home/>
-        <Skills/>
+        {/* <Skills/>
         <Projects projectsData = {projectsData}/>
-        <Experience/>
+        <Experience/> */}
         {/* <Contact/> */}
 
         {/* <Slider/> */}

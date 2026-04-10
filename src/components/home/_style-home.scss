@@ -3,33 +3,50 @@
 .home {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
    min-height: auto;
    flex-wrap: wrap;
-   width: 100%;
    margin: 200px 0;
    padding: 50px 20px;
-   border-radius: 25px;
-   background: rgba(var(--color-blue-rgb), 0.25);
-   box-shadow: 0 0 60px rgba(var(--color-blue-rgb), 0.7), 0 0 20px rgba(var(--color-blue-rgb), 0.5);
-   border: 1px solid rgba(var(--color-blue-rgb), 0.5);
-   overflow: hidden;
      
+      &__greeting {
+         text-transform: var(--text-uppercase-uppercase);
+         font-weight: var(--font-weight-bold);
+         font-size: 18px;
+         letter-spacing: 10px;
+      }
+
+      &__text {
+         font-size: 30px;  
+         margin-top: 10px;
+      }
 
      &__content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 650px;
-        margin-right: 0;
+        max-width: 730px;
         flex: 1;
      }
 
+     &__heading {
+         margin: 20px 0;
+         letter-spacing: 6px;
+         background-image: linear-gradient(
+            to right, var(--color-white), var(--color-grey-toxic)
+         );
+         background-clip: text;
+         color: transparent;
+         display: inline-block;
+     }
+
      &__description {
-        margin: 30px 20px 30px 0;
         justify-content: center;
-        font-size: 25px;
+        font-size: 30px;
         line-height: 40px;
+     }
+
+     &__actions {
+         margin-top: 50px;
      }
 
      &__button--download {
@@ -44,17 +61,13 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         margin: 0 20px;
-         padding: 2px;
-         height: fit-content;
-         background-color: rgba(var(--color-blue-rgb), 0.3);
-         box-shadow: inset 0 0 50px black;
+         margin-left: auto;
      }
 
-     &__image{
-        width: 400px;
-        height: 500px;
-        padding: 2px;
-        flex-shrink: 0;
-     }
+   //   &__image{
+   //    position: absolute;
+   //      width: 400px;
+   //      height: 500px;
+   //      flex-shrink: 0;
+   //   }
 }

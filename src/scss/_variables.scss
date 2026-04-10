@@ -4,11 +4,13 @@
     :root CSS селектор — указывает на <html> 
 */
 
+
+
 :root {
     --color-white:  #FFFFFF;
     --color-black:  #181818;
     --color-black-50:  #222629;
-    --color-green: #d1ff07d8;
+    --color-green: #d6d6d6d8;
     --color-green-50: #f3f3ef;
     --color-grey-toxic: #d1ff05;
     --color-grey-50: #a6e44f;
@@ -27,6 +29,7 @@
 
 
     --font-family-base: 'Manrope', sans-serif;
+    --font-family-baseA: 'Josefin Sans', sans-serif;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --text-uppercase-uppercase: uppercase;

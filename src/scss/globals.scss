@@ -12,70 +12,49 @@
   flex-direction: column;
 }
 
-.page__main {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 body {
     position: relative;
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-base);
-    font-size: 18px;
+    font-size: 24px;
     color: var(--color-white);
-    background-color: var(--color-black);
+    background-color: var(--color-black-50);
 }
 
+.page__main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 h1,h2,h3 {
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
+    color: var(--color-white);
     margin: 0;
     padding: 0;
 }
 
-h1,h2 {
-    color: var(--color-white);
-    font-weight: var(--font-weight-bold);
-    -webkit-text-stroke: 1px var(--color-grey-50);
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px var(--color-grey-50),
-        0 0 30px var(--color-grey-toxic),
-        0 0 50px var(--color-grey-toxic);
-}
-
 h1 {
-    // color: #a200fa;
-    text-transform: var(--text-uppercase-uppercase);
     font-size: 40px;
-    color: var(--color-white);
-    font-weight: var(--font-weight-bold);
-    text-transform: var(--text-uppercase-uppercase);
-    font-size: 40px;
+    color: var(--color-grey-toxic);
 }
 
 h2 {
-    font-weight: var(--font-weight-bold);
-    text-transform: var(--text-uppercase-uppercase);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 h3 {
-    color: var(--color-green);
-    font-weight: var(--font-weight-bold);
-    text-transform: var(--text-uppercase-uppercase);
     font-size: 25px;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 ul,
@@ -98,12 +77,13 @@ img {
    
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 16px;
 
     border: 2px solid var(--color-white);
     border-radius: 30px;
     color: var(--color-white);
     background-color: var(--color-black);
-    box-shadow: 0 0 15px var(--color-grey-toxic), inset 0 0 15px var(--color-grey-toxic);
+    box-shadow: 0 0 20px var(--color-grey-toxic), inset 0 0 20px var(--color-grey-toxic);
 
     cursor: pointer;
     transition: all 0.3s ease;
