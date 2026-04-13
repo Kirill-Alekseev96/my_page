@@ -1,13 +1,13 @@
-import type { ProjectsDataType } from "./types/type-data";
+enum AppRoute {
+    Home = '/Home',
+    Skills = '/Skills',
+    Portfolio = '/Portfolio',
+}
 
+const PAGES = [
+    { name: 'Главная', path: AppRoute.Home },
+    { name: 'Навыки', path: AppRoute.Skills },
+    { name: 'Проекты', path: AppRoute.Portfolio },
+];
 
-const projectsData: ProjectsDataType = [
-    {
-        id: '1',
-        title: 'Проект 1',
-        description: 'Описание проекта',
-        images: ['HTML_CSS_1', 'HTML_CSS_2', 'HTML_CSS_3'],
-    },
-]
-
-export {projectsData};
+export { AppRoute, PAGES }

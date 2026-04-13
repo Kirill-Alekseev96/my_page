@@ -19,7 +19,7 @@
     }
 
     &__item {
-        padding: 30px;
+        position: relative;
         transition: all 0.8s ease;
         cursor: pointer;
     }
@@ -33,10 +33,22 @@
     }
 
     &__link {
+        display: block;
         text-transform: var(--text-uppercase-uppercase);
         font-weight: var(--font-weight-normal);
+        padding: 30px;
         font-size: 18px;
         letter-spacing: 6px;
+    }
+
+    &__link--active::before {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        left: 20px;
+        height: 4px;
+        background-color: var(--color-grey-toxic);
+        content: '';
     }
 
     &__theme-btn {

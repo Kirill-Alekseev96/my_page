@@ -3,9 +3,10 @@
 .home {
    display: flex;
    flex-direction: row;
+   justify-content: center;
+   align-items: center;
    min-height: auto;
    flex-wrap: wrap;
-   margin: 200px 0;
    padding: 50px 20px;
      
       &__greeting {
@@ -64,10 +65,9 @@
          margin-left: auto;
      }
 
-   //   &__image{
-   //    position: absolute;
-   //      width: 400px;
-   //      height: 500px;
-   //      flex-shrink: 0;
-   //   }
+     &__image{
+        width: 450px;
+        height: 650px;
+        flex-shrink: 0;
+     }
 }

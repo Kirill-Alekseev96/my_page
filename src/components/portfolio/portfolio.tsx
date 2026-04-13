@@ -1,3 +1,7 @@
+// import Splide from '@splidejs/splide';
+// import "@splidejs/splide/css";
+// // import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
 import { useCallback, useState } from "react";
 import type { PortfolioDataType } from "../../types/type-data";
 import Slider from "../slider/slider";
@@ -27,26 +31,45 @@ export default function Portfolio({projectsData}:PortfolioProps) {
     },[])
 
 
+    // new Splide( '.splide' ).mount();
+    // const splide = new Splide( '.splide', {
+    //     type   : 'loop',
+    //     drag   : 'free',
+    //     focus  : 'center',
+    //     perPage: 3,
+    //     autoScroll: {
+    //         speed: 1,
+    //     },
+    // } );
+
+    // splide.mount();
+
+
     return(
         <section className="projects">
             <h2 className="projects__heading heading">Проекты</h2>
-            <ul className="projects__list">
 
-                {projectsData.map((project) => (
-                    <>
-                        <li className="projects__item">
-                            <img className="projects__image" onClick = {() => handleOpenSlider(project.id)} src={project.previewImage} alt={project.title} width={300} height={300}/>
-                    
-                            <div className="projects__content">
-                                <h3 className="projects__title">{project.title}</h3>
-                                <p className="projects__description">{project.description}</p>
-                            </div>
-                        </li>
-                    </>
-                ))}
+
+            <div className="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div className="splide__track">
+                        <ul className="splide__list">
+
+                            {projectsData.map((project) => (
+
+                                <li className="splide__slide" key={project.id}>
+                                    <img className="projects__image" onClick = {() => handleOpenSlider(project.id)} src={project.previewImage} alt={project.title}/>
+                            
+                                    <div className="projects__content">
+                                        <h3 className="projects__title">{project.title}</h3>
+                                        <p className="projects__description">{project.description}</p>
+                                    </div>
+                                </li>                          
+                            
+                            ))}
+                        </ul>
+                </div>
+            </div>
                 
-            </ul>
-
             {isOpenSlider && <Slider 
                 project = {project}
                 onClose = {handleCloseSlider}

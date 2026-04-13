@@ -1,36 +1,37 @@
 .projects {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-bottom: 100px;
 
     &__heading {
-        margin-bottom: 50px;
-    }
-
-    &__image {
-        cursor: pointer;
-        border-radius: 25px;
+        text-align: center;
+        margin-bottom: 80px;
+        letter-spacing: 10px;
     }
 
     &__list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        padding: 20px;
-
-        border-radius: 25px;
-        background: rgba(var(--color-blue-rgb), 0.25);
-        box-shadow: 0 0 60px rgba(var(--color-blue-rgb), 0.7), 0 0 20px rgba(var(--color-blue-rgb), 0.5);
-        border: 1px solid rgba(var(--color-blue-rgb), 0.5);
-        overflow: hidden;
+        justify-content: center;
+        align-items: center;
     }
 
     &__item {
-        text-align: center;
+        display: block;
+        width: 300px;
     }
 
-    &__title {
-        margin: 20px 0 5px 0;
+   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+
+    &__image {
+        width: 300px;
+        cursor: pointer;
+        border-radius: 25px;
     }
+
 }

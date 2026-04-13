@@ -1,6 +1,6 @@
 export default function Skills () {
     return (
-        <section className="skills" id = "skills">
+        <section className="skills">
             <h2 className="skills__heading heading">Навыки</h2>
             <ul className="skills__list">
                 <li className="skills__item">
@@ -18,7 +18,7 @@ export default function Skills () {
                             Адаптивная и мобильная верстка
                         </li>
                         <li className="skills__item-inner">
-                            Препроцессоры (SCSS/SASS)
+                            Препроцессоры<br/>(SCSS/SASS)
                         </li>
                         <li className="skills__item-inner">
                             Методология БЭМ
@@ -27,19 +27,19 @@ export default function Skills () {
                 </li>
                 <li className="skills__item">
                     <div className="skills__svg skills__svg-brackets"></div>
-                    <h3 className="skills__title">JavaScript & React</h3>
+                    <h3 className="skills__title">JavaScript<br/>React</h3>
                     <ul className="skills__list-inner">
                         <li className="skills__item-inner">
-                            Основы JavaScript (ES6+)
+                            Основы JavaScript(ES6+)
                         </li>
                         <li className="skills__item-inner">
-                            Асинхронность (Promises, async/await)
+                            Асинхронность<br/>(Promises, async/await)
                         </li>
                         <li className="skills__item-inner">
-                            Работа с API (fetch, REST)
+                            Работа с API(fetch, REST)
                         </li>
                         <li className="skills__item-inner">
-                            React (библиотека для интерфейсов)
+                            React(библиотека для интерфейсов)
                         </li>
                         <li className="skills__item-inner">
                             TypeScript

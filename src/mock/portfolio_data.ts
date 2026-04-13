@@ -8,7 +8,7 @@ export const projectsData: PortfolioDataType[] = [
     previewImage: 'public/images/preview_html-css.jpg',
     images: [
       { 
-        src: 'public/images/HTML_CSS_1.png',
+        src: '/images/HTML_CSS_1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
@@ -16,7 +16,7 @@ export const projectsData: PortfolioDataType[] = [
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: 'public/images/HTML_CSS_3.png',
+        src: '/images/HTML_CSS_3.png',
         alt: 'Планшетная версия интерфейса',
       }
     ]
@@ -28,15 +28,15 @@ export const projectsData: PortfolioDataType[] = [
     previewImage: '/images/preview_js.jpg',
     images: [
       { 
-        src: 'public/images/inst_1.png',
+        src: '/images/inst_1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: 'public/images/inst_2.png',
+        src: '/images/inst_2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: 'public/images/inst_3.png',
+        src: '/images/inst_3.png',
         alt: 'Планшетная версия интерфейса',
       }
     ]
@@ -48,15 +48,15 @@ export const projectsData: PortfolioDataType[] = [
     previewImage: '/images/preview_html-css.jpg',
     images: [
       { 
-        src: 'public/images/HTML_CSS_1.png',
+        src: '/images/HTML_CSS_1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: 'public/images/HTML_CSS_2.png',
+        src: '/images/HTML_CSS_2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: 'public/images/HTML_CSS_3.png',
+        src: '/images/HTML_CSS_3.png',
         alt: 'Планшетная версия интерфейса',
       }
     ]

@@ -1,4 +1,15 @@
+import { NavLink } from "react-router-dom";
+import { PAGES } from "../../const";
+
 export default function Header () {
+
+    type NavLinkProps = {
+        isActive: boolean;
+    };
+
+    const getLinkClassName = ({ isActive }:NavLinkProps) => 
+    `header__link ${isActive ? 'header__link--active' : ''}`;
+
     return (
         <header className="header">
             <div className="header__container">
@@ -6,21 +17,12 @@ export default function Header () {
                 
                 <nav className="header__nav">
                     <ul className="header__list">
-                        <li className="header__item">
-                            <a className="header__link header__link--active" href="">Главная</a>
-                        </li>
-                        <li className="header__item">
-                            <a className="header__link" href="#skills">Навыки</a>
-                        </li>
-                        <li className="header__item">
-                            <a className="header__link" href="">Проекты</a>
-                        </li>
-                        <li className="header__item">
-                            <a className="header__link" href="">Опыт</a>
-                        </li>
-                        <li className="header__item">
-                            <a className="header__link" href="">Контакты</a>
-                        </li>
+
+                        {PAGES.map((page) => (
+                             <li className="header__item">
+                                <NavLink className={getLinkClassName} to={page.path}>{page.name}</NavLink>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 

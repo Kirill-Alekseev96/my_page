@@ -1,41 +1,73 @@
 .skills {
-    width: 100%;
-    margin-bottom: 200px;
+    min-height: auto;
+    flex-wrap: wrap;
 
     &__heading {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
+        letter-spacing: 10px;
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        align-items: stretch;
         flex-wrap: wrap;
-        gap: 20px;
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 350px;
-        padding: 10px;
-
+        width: 400px;
+        padding: 50px;
+        
         border-radius: 25px;
-        background: rgba(var(--color-blue-rgb), 0.25);
-        box-shadow: 0 0 60px rgba(var(--color-blue-rgb), 0.7), 0 0 20px rgba(var(--color-blue-rgb), 0.5);
-        border: 1px solid rgba(var(--color-blue-rgb), 0.5);
+        background: rgba(var(--color-white-rgb), 0.5);
+        box-shadow: 0 0 20px rgba(var(--color-white-rgb), 0.7), 
+                    0 0 20px rgba(var(--color-white-rgb), 0.5),
+                    inset 0 0 150px rgba(var(--color-black-rgb), 1);
+        border: 1px solid rgba(var(--color-black-rgb), 0.8);
         overflow: hidden;
+
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
     }
 
     &__title {
+        display: block;
+        text-align: center;
         margin: 20px 0;
+        letter-spacing: 6px;
+         background-image: linear-gradient(
+            to right, var(--color-white), var(--color-grey-toxic)
+         );
+         background-clip: text;
+         color: transparent;
     }
 
+
+    &__item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 0 40px rgba(var(--color-white-rgb), 0.5);
+    }
+    
+
     &__item-inner {
+        color: var(--color-black);
         text-align: center;
-        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: var(--font-weight-bold);
+        cursor: pointer;
+
+        text-transform: var(--text-uppercase-uppercase);
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    &__item-inner:not(:last-child) {
+        margin-bottom: 20px;
     }
 
     &__svg {
@@ -50,9 +82,9 @@
         transition: background-color 0.3s ease;
     }
 
-    &__list:hover &__svg {
+    &__item:hover &__svg {
         transform: rotate(360deg);
-        background-color: var(--color-orange); 
+        background-color: var(--color-grey-toxic); 
         transition: transform 0.5s ease;
     }
     
