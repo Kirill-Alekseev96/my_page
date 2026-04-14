@@ -46,7 +46,6 @@ export default function Slider ({project, onClose}:SliderProps) {
 
                 </div>
                 </div>
-                <button onClick = {onClose} className="slider__close-button" aria-label="закрыть"></button>
                 <div className="slider__container-button">
                     <button onClick = {showPreviousSlide} className="prev__button slider__button" aria-label="Посмотреть предыдущий слайд"></button>
                     <button onClick = {showNextSlide} className="next__button slider__button" aria-label="Посмотреть следующий слайд"></button>
