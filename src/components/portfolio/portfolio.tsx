@@ -26,18 +26,6 @@ export default function Portfolio({projectsData}:PortfolioProps) {
         setProject(null);
     },[])
 
-    useEffect(() => {
-        const body = document.querySelector('body')
-
-        if(isOpenSlider){
-            body?.classList.add('body--slider-open');
-        }else {
-            body?.classList.remove('body--slider-open');
-        }
-
-    }, [isOpenSlider])
-
-
     return(
         <section className="projects">
             <h2 className="projects__heading heading">Проекты</h2>
@@ -61,7 +49,7 @@ export default function Portfolio({projectsData}:PortfolioProps) {
             {isOpenSlider && 
             <>
                 <div className="slider-backdrop" onClick={handleCloseSlider} />
-                <Slider project = {project} onClose = {handleCloseSlider}/>
+                <Slider project = {project}/>
             </>
             }
 

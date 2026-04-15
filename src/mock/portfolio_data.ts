@@ -5,27 +5,28 @@ export const projectsData: PortfolioDataType[] = [
     id: '1',
     title: 'HTML/CSS',
     description: 'Вёрстка и стилизация',
-    previewImage: 'public/images/preview_html-css.jpg',
+    previewImage: 'public/images/preview2_html-css.jpg',
     images: [
       { 
-        src: '/images/HTML_CSS_1.png',
+        src: '/images/HTML_CSS_1а.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: '/images/HTML_CSS_2.png',
+        src: '/images/HTML_CSS_2а.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
         src: '/images/HTML_CSS_3.png',
         alt: 'Планшетная версия интерфейса',
       }
-    ]
+    ],
+    fullDescription: 'Разработана качественная вёрстка по предоставленному макету с соблюдением принципа Pixel Perfect — каждый пиксель точно соответствует дизайн-проекту.',
   },
   {
     id: '2',
     title: 'JS',
     description: 'Интерактивность и логика',
-    previewImage: '/images/preview_js.jpg',
+    previewImage: '/images/preview2_js.jpg',
     images: [
       { 
         src: '/images/inst_1.png',
@@ -48,15 +49,19 @@ export const projectsData: PortfolioDataType[] = [
     previewImage: '/images/preview_html-css.jpg',
     images: [
       { 
-        src: '/images/HTML_CSS_1.png',
+        src: '/images/1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: '/images/HTML_CSS_2.png',
+        src: '/images/22.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: '/images/HTML_CSS_3.png',
+        src: '/images/3.png',
+        alt: 'Планшетная версия интерфейса',
+      },
+      { 
+        src: '/images/4.png',
         alt: 'Планшетная версия интерфейса',
       }
     ]

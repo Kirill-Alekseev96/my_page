@@ -3,10 +3,9 @@ import type { projectsDataType } from "../../types/type-data";
 
 interface SliderProps {
   project: projectsDataType | null;
-  onClose: () => void;
 }
 
-export default function Slider ({project, onClose}:SliderProps) {
+export default function Slider ({project}:SliderProps) {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
@@ -14,7 +13,7 @@ export default function Slider ({project, onClose}:SliderProps) {
         return null;
     }
 
-    const {images} = project;
+    const {images, fullDescription} = project;
 
     const slideCount = images.length;
 
@@ -34,7 +33,6 @@ export default function Slider ({project, onClose}:SliderProps) {
 
              <div className="slider__container">
                 <div className="slider__container-inner">
-                    <div className="slider__wrap">
 
                     {images.map((image, index)=>(
                         <img className="slider__image" 
@@ -43,14 +41,13 @@ export default function Slider ({project, onClose}:SliderProps) {
                             style={{ display: index === slideIndex ? 'block' : 'none' }}
                         />
                     ))}
-
+    
                 </div>
-                </div>
+                <p className="slider__description-full">{fullDescription}</p>
                 <div className="slider__container-button">
                     <button onClick = {showPreviousSlide} className="prev__button slider__button" aria-label="Посмотреть предыдущий слайд"></button>
                     <button onClick = {showNextSlide} className="next__button slider__button" aria-label="Посмотреть следующий слайд"></button>
                 </div>
-                
             </div>
 
         </div>
