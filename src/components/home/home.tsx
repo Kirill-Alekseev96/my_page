@@ -1,35 +1,35 @@
 import { useEffect, useState } from "react";
+import Contact from "../contact/contact";
 
 export default function Home () {
 
-    const [currentText, setCurrentText] = useState('');
-    const [count, setCount] = useState(0);
-    const text = 'Разработчик';
+    // const [currentText, setCurrentText] = useState('');
+    // const [count, setCount] = useState(0);
+    // const text = 'Разработчик';
 
-    useEffect (() => {
-        console.log(text.split(''))
+    // useEffect (() => {
 
-        const interval = setInterval(() => {
-            if(count < text.length) {
-                setCurrentText(prev => prev + text[count]);
-                setCount(prev => prev + 1); // prev - это актуальное значение
+    //     const interval = setInterval(() => {
+    //         if(count < text.length) {
+    //             setCurrentText(prev => prev + text[count]);
+    //             setCount(prev => prev + 1); // prev - это актуальное значение
 
-            }else{
-                clearInterval(interval);
-                setTimeout(() => {
-                    setCurrentText('');
-                    setCount(0);
-                }, 2000);
+    //         }else{
+    //             clearInterval(interval);
+    //             setTimeout(() => {
+    //                 setCurrentText('');
+    //                 setCount(0);
+    //             }, 2000);
         
-            }
-        }, 120)
+    //         }
+    //     }, 120)
 
-        return () => clearInterval(interval); 
-    },[count]);
+    //     return () => clearInterval(interval); 
+    // },[count]);
 
     return (
         <section className="home">
-            <div className="home__content">
+            {/* <div className="home__content">
                 <span className="home__greeting">Привет</span>
                 <span className="home__text">Меня зовут Кирилл Алексеев</span>
                 <h1 className="home__heading heading">Я Frontend {currentText}</h1>
@@ -44,7 +44,8 @@ export default function Home () {
             </div>
             <div className="home__inner">
                 <img className="home__image" src='/images/IMG_4786-Photoroom.png' alt="zxcc"/>
-            </div>
+            </div> */}
+             <Contact/>
         </section>
     )
 } 

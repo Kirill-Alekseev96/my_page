@@ -29,10 +29,6 @@ export const projectsData: PortfolioDataType[] = [
     previewImage: '/images/preview2_js.jpg',
     images: [
       { 
-        src: '/images/inst_1.png',
-        alt: 'Главная страница сайта на десктопе',
-      },
-      { 
         src: '/images/inst_2.png',
         alt: 'Мобильная адаптация сайта',
       },
@@ -40,20 +36,21 @@ export const projectsData: PortfolioDataType[] = [
         src: '/images/inst_3.png',
         alt: 'Планшетная версия интерфейса',
       }
-    ]
+    ],
+    fullDescription: 'Реализована полноценная интерактивность на ванильном JavaScript (ES6+): динамический DOM, события, состояние через объекты/массивы, localStorage.',
   },
   {
     id: '3',
     title: 'JS + REACT + TS',
     description: 'Компонентный подход и типизация',
-    previewImage: '/images/preview_html-css.jpg',
+    previewImage: '/images/preview2_react.jpg',
     images: [
       { 
         src: '/images/1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: '/images/22.png',
+        src: '/images/2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
@@ -64,6 +61,7 @@ export const projectsData: PortfolioDataType[] = [
         src: '/images/4.png',
         alt: 'Планшетная версия интерфейса',
       }
-    ]
+    ],
+    fullDescription: 'Реализован компонентный подход на React + TypeScript с глобальным состоянием через Redux Toolkit, мемоизацией и типизированными запросами к бэкенду.',
   }
 ]
