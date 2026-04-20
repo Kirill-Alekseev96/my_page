@@ -3,9 +3,10 @@ import type { projectsDataType } from "../../types/type-data";
 
 interface SliderProps {
   project: projectsDataType | null;
+  onClose: () => void;
 }
 
-export default function Slider ({project}:SliderProps) {
+export default function Slider ({project, onClose}:SliderProps) {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
@@ -43,7 +44,7 @@ export default function Slider ({project}:SliderProps) {
                                 style={{ display: index === slideIndex ? 'block' : 'none' }}
                             />
                         ))}
-
+                        <button onClick = {onClose} className="slider__close-button" aria-label="закрыть"></button>
                         <div className="slider__container-button">
                             <button onClick = {showPreviousSlide} className="prev__button slider__button" aria-label="Посмотреть предыдущий слайд"></button>
                             <button onClick = {showNextSlide} className="next__button slider__button" aria-label="Посмотреть следующий слайд"></button>

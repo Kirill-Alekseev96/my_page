@@ -2,9 +2,9 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 type ContactType = {
-  handleCloseContact: () => void;
+  onClose: () => void;
 };
-export default function Contact({handleCloseContact}:ContactType) {
+export default function Contact({onClose}:ContactType) {
     
     const YOUR_PUBLIC_KEY:string = 'Wy6_ryLnjhWXKOZ0T';
     const YOUR_SERVICE_ID:string = 'service_ip7eo26';
@@ -27,7 +27,7 @@ export default function Contact({handleCloseContact}:ContactType) {
         .then(
             () => {
             console.log('SUCCESS!');
-            handleCloseContact();
+            onClose();
             form.current!.reset();
             },
             (error) => {
@@ -42,7 +42,7 @@ export default function Contact({handleCloseContact}:ContactType) {
                 {/* <h2 className="contact__heading visibility-hidden">Письмо</h2>
                 <p className="contact__description">отправить мне сообщение</p> */}
                 <form id="contact__form" className="contact__form" ref={form} onSubmit={sendEmail}>
-                    <h2 className="contact__heading visibility-hidden">Письмо</h2>
+                    <h2 className="contact__heading visually-hidden">Письмо</h2>
                     <p className="contact__description">отправить мне сообщение</p>
                     <input type="hidden" name="time" />
                     <div className='contact__container-inner'>
@@ -64,7 +64,7 @@ export default function Contact({handleCloseContact}:ContactType) {
                         <label className='contact__label'>Сообщение</label>
                         <textarea className='contact__message' name="contact__message" required></textarea>
                     </div>
-                
+                    <button onClick = {onClose} className="contact__close-button" aria-label="закрыть"></button>
                     <input className = 'contact__button button' type="submit" value="Отправить"/>
                 </form>
             </div>

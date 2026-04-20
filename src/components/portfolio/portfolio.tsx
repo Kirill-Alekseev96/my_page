@@ -25,9 +25,12 @@ export default function Portfolio({projectsData}:PortfolioProps) {
         setIsOpenSlider(false);
         setProject(null);
     },[])
+    
 
     return(
-        <section className="projects">
+
+        <>
+                {!isOpenSlider ? (<section className="projects">
             <h2 className="projects__heading heading">Проекты</h2>
             <ul className="projects__list">
 
@@ -46,13 +49,13 @@ export default function Portfolio({projectsData}:PortfolioProps) {
                 
             </ul>
 
-            {isOpenSlider && 
-            <>
-                <div className="slider-backdrop" onClick={handleCloseSlider} />
-                <Slider project = {project}/>
-            </>
-            }
-
         </section>
+                    
+                ) : (
+                    <>
+                        <Slider project = {project} onClose={handleCloseSlider}/>
+                    </>
+                )}
+            </>
     )
 }

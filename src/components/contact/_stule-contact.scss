@@ -1,18 +1,17 @@
 .contact {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     
-    min-height: auto;
+    // min-height: 100vh;
 
     &__container {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-
-        border-radius: 25px;
-                    
+        width: 400px;
+        height: 600px;
+        border-radius: 8px;
+        background: var(--color-black); 
         overflow: hidden;
         
     }
@@ -20,14 +19,30 @@
     &__container::before {
         content: '';
         position: absolute;
+        inset: -2px;
         top: -50%;
         left: -50%;
-        width: 500px;
-         
+        width: 400px;
+        height: 600px; 
         background: linear-gradient(0deg, transparent, transparent, var(--color-grey-toxic), var(--color-grey-toxic), var(--color-grey-toxic));
-        z-index: 1;
+        z-index: 0;
         transform-origin: bottom right;
-        animation: animate 6s linear infinite;
+        animation: animate 4s linear infinite;
+    }
+
+    &__container::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        top: -50%;
+        left: -50%;
+        width: 400px;
+        height: 600px; 
+        background: linear-gradient(0deg, transparent, transparent, var(--color-grey-toxic), var(--color-grey-toxic), var(--color-grey-toxic));
+        z-index: 0;
+        transform-origin: bottom right;
+        animation: animate 4s linear infinite;
+        animation-delay: -2s;
     }
 
     @keyframes animate
@@ -42,34 +57,34 @@
         }
     }
 
+    &__form {
+        position: absolute;
+        inset: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 5px;
+        gap: 10px;
+        background: #2e2e2e;
+        z-index: 1;
+        
+    }
+
     &__heading {
         text-align: center;
         color: white;
-        margin: 0;
         letter-spacing: 5px;
         color: var(--color-grey-toxic);
     }
 
     &__description {
+        font-size: 20px;
         text-align: center;
-        margin: 0;
         letter-spacing: 3px;
         color: var(--color-grey-toxic);
-    }
-
-    &__form {
-        inset: 10px;
-        background: aliceblue;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        z-index: 2;
-        padding: 20px;
-        gap: 20px;
-        background: rgba(var(--color-white-rgb), 0.6);
-        box-shadow: 0 0 20px rgba(var(--color-white-rgb), 0.7), 
-                    0 0 20px rgba(var(--color-white-rgb), 0.5),
-                    inset 0 0 150px rgba(var(--color-black-rgb), 1);
+        margin-top: 20px;
     }
 
     &__container-inner {
@@ -81,20 +96,27 @@
     }
 
     &__label {
-        color: var(--color-grey-toxic);
+        letter-spacing: 6px;
+         background-image: linear-gradient(
+            to right, var(--color-white), var(--color-grey-toxic)
+         );
+         background-clip: text;
+         color: transparent;
+        font-size: 16px;
         min-width: 80px;
         align-self: start;
     }
 
     &__input {
         width: 100%;
-        padding: 10px;
+        padding: 5px 10px;
         outline: none;
         border-radius: 8px;
         border: none;
         font-size: 16px;
         transition: 0.5s;
-        
+        background-color: #f3f5e7;
+
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
         }
@@ -107,7 +129,8 @@
         border: none;
         font-size: 16px;
         resize: vertical;
-        min-height: 200px;
+        min-height: 150px;   
+        background-color: #f3f5e7; 
         
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
@@ -115,9 +138,39 @@
     }
 
     &__button {
+        display: flex;
+
+        align-self: flex-end;
         width: 200px;
         padding: 10px 20px;
     }
+
+    &__close-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        border-radius: 10px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     &__close-button::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: linear-gradient(
+            to right, var(--color-white), var(--color-grey-toxic)
+         );
+        mask: url('/icons/close.svg') no-repeat center/contain;
+        -webkit-mask: url('/icons/close.svg') no-repeat center/contain;
+    } 
 
 
 

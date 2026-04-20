@@ -77,7 +77,7 @@ export default function Home () {
         ) : (
             <>
                 <div className="slider-backdrop" onClick={handleCloseContact} />
-                <Contact handleCloseContact={handleCloseContact}/>
+                <Contact onClose={handleCloseContact}/>
             </>
         )}
     </>
