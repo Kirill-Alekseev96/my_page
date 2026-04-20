@@ -1,5 +1,5 @@
 enum AppRoute {
-    Home = '/Home',
+    Home = '/',
     Skills = '/Skills',
     Portfolio = '/Portfolio',
 }

@@ -38,32 +38,36 @@ export default function Contact({handleCloseContact}:ContactType) {
 
     return (
         <section className="contact">
-            <h2 className="contact__heading heading">Письмо</h2>
-            <p className="contact__description">отправить мне сообщение</p>
-            <form id="contact__form" className="contact__form" ref={form} onSubmit={sendEmail}>
-                <input type="hidden" name="time" />
-                <div className='contact__container-inner'>
-                    <label className='contact__label'>Имя</label>
-                    <input className = 'contact__input' type="text" name="name" required/>
-                </div>
+            <div className="contact__container">
+                {/* <h2 className="contact__heading visibility-hidden">Письмо</h2>
+                <p className="contact__description">отправить мне сообщение</p> */}
+                <form id="contact__form" className="contact__form" ref={form} onSubmit={sendEmail}>
+                    <h2 className="contact__heading visibility-hidden">Письмо</h2>
+                    <p className="contact__description">отправить мне сообщение</p>
+                    <input type="hidden" name="time" />
+                    <div className='contact__container-inner'>
+                        <label className='contact__label'>Имя</label>
+                        <input className = 'contact__input' type="text" name="name" required/>
+                    </div>
 
-                <div className='contact__container-inner'>
-                    <label className='contact__label'>Почта</label>
-                    <input className = 'contact__input' type="email" name="email" required placeholder="Ваша почта@mail.com"/>
-                </div>
+                    <div className='contact__container-inner'>
+                        <label className='contact__label'>Почта</label>
+                        <input className = 'contact__input' type="email" name="email" required placeholder="Ваша почта@mail.com"/>
+                    </div>
 
-                <div className='contact__container-inner'>
-                    <label className='contact__label'>Заголовок</label>
-                    <input className = 'contact__input' type="text" name="title" required/>
-                </div>
-            
-                <div className='contact__container-inner'>
-                    <label className='contact__label'>Сообщение</label>
-                    <textarea name="contact__message" required></textarea>
-                </div>
-               
-                <input className = 'contact__input button' type="submit" value="Отправить"/>
-            </form>
+                    <div className='contact__container-inner'>
+                        <label className='contact__label'>Заголовок</label>
+                        <input className = 'contact__input' type="text" name="title" required/>
+                    </div>
+                
+                    <div className='contact__container-inner'>
+                        <label className='contact__label'>Сообщение</label>
+                        <textarea className='contact__message' name="contact__message" required></textarea>
+                    </div>
+                
+                    <input className = 'contact__button button' type="submit" value="Отправить"/>
+                </form>
+            </div>
         </section>
     )
 }
