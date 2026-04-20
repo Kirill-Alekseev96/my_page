@@ -1,21 +1,77 @@
 .contact {
     position: absolute;
-    border:  2px solid #8d8d8d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #8d8d8d;
     padding: 20px;
     border-radius: 20px;
-    background-color: #6e6e6e;
+    background: rgba(var(--color-white-rgb), 0.5);
+        box-shadow: 0 0 20px rgba(var(--color-white-rgb), 0.7), 
+                    0 0 20px rgba(var(--color-white-rgb), 0.5),
+                    inset 0 0 150px rgba(var(--color-black-rgb), 1);
     z-index: 999;
+    width: 350px;
+
+    &__heading {
+        text-align: center;
+        color: white;
+        margin: 0;
+    }
+
+    &__description {
+        text-align: center;
+        margin: 0;
+    }
 
     &__form {
-        display:flex;
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        max-width: 300px;
         gap: 20px;
     }
 
-    &__submit {
-        padding: 10px 20px;
-        font-size: 1rem;
+    &__container-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;  // 👈 Добавить для выравнивания по центру
+        gap: 10px;
     }
+
+    &__label {
+        color: var(--color-grey-toxic);
+        min-width: 80px;  // 👈 Фиксированная ширина для всех label
+        align-self: start;
+    }
+
+    &__input {
+        width: 300px; // 👈 Растягивается на оставшееся место
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        
+        &:focus {
+            outline: 2px solid #4caf50;
+        }
+    }
+
+    // Для textarea (поле сообщения)
+    textarea {
+        flex: 1;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        resize: vertical;
+        min-height: 100px;
+        
+        &:focus {
+            outline: 2px solid #4caf50;
+        }
+    }
+
 }

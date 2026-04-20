@@ -5,7 +5,6 @@ export default function Skills () {
             <ul className="skills__list">
                 <li className="skills__item">
                     <div className="skills__svg skills__svg-html"></div>
-                    {/* <img className="skills__svg" src="public/icons/html.svg" alt="HTML/CSS"/> */}
                     <h3 className="skills__title">HTML/CSS</h3>
                     <ul className="skills__list-inner">
                         <li className="skills__item-inner">

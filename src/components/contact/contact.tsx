@@ -1,7 +1,11 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+type ContactType = {
+  handleCloseContact: () => void;
+};
+export default function Contact({handleCloseContact}:ContactType) {
+    
     const YOUR_PUBLIC_KEY:string = 'Wy6_ryLnjhWXKOZ0T';
     const YOUR_SERVICE_ID:string = 'service_ip7eo26';
     const YOUR_TEMPLATE_ID: string = 'template_jgk5mvn';
@@ -9,7 +13,7 @@ export default function Contact() {
     const form = useRef<HTMLFormElement>(null);
 
     const sendEmail = (event:React.SyntheticEvent) => {
-    event.preventDefault();
+        event.preventDefault();
 
     // Устанавливаем текущую дату
         const now = new Date();
@@ -23,6 +27,7 @@ export default function Contact() {
         .then(
             () => {
             console.log('SUCCESS!');
+            handleCloseContact();
             form.current!.reset();
             },
             (error) => {
@@ -33,21 +38,32 @@ export default function Contact() {
 
     return (
         <section className="contact">
-            <h2 className="contact__heading heading">qw</h2>
-            <p className="contact__description">qw</p>
-            <form id="contact-form" className="contact__form" ref={form} onSubmit={sendEmail}>
-                <input type="hidden" name="time" value="Mar 10 2025 08:46"/>
-                <label>Имя</label>
-                <input type="text" name="name" required/>
-                <label>Почта</label>
-                <input type="email" name="email" required/>
-                <label>Заголовок</label>
-                <input type="text" name="title" required/>
-                <label>Сообщение</label>
-                <textarea name="message" required></textarea>
-                <input type="submit" value="Отправить"/>
+            <h2 className="contact__heading heading">Письмо</h2>
+            <p className="contact__description">отправить мне сообщение</p>
+            <form id="contact__form" className="contact__form" ref={form} onSubmit={sendEmail}>
+                <input type="hidden" name="time" />
+                <div className='contact__container-inner'>
+                    <label className='contact__label'>Имя</label>
+                    <input className = 'contact__input' type="text" name="name" required/>
+                </div>
+
+                <div className='contact__container-inner'>
+                    <label className='contact__label'>Почта</label>
+                    <input className = 'contact__input' type="email" name="email" required placeholder="Ваша почта@mail.com"/>
+                </div>
+
+                <div className='contact__container-inner'>
+                    <label className='contact__label'>Заголовок</label>
+                    <input className = 'contact__input' type="text" name="title" required/>
+                </div>
+            
+                <div className='contact__container-inner'>
+                    <label className='contact__label'>Сообщение</label>
+                    <textarea name="contact__message" required></textarea>
+                </div>
+               
+                <input className = 'contact__input button' type="submit" value="Отправить"/>
             </form>
-            <a className="contact__phone" href="tel:+79506874336">+7(950)-687-43-36</a>
         </section>
     )
 }

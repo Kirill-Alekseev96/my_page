@@ -10,4 +10,6 @@ const PAGES = [
     { name: 'Проекты', path: AppRoute.Portfolio },
 ];
 
-export { AppRoute, PAGES }
+const ROLE = 'Разработчик';
+
+export { AppRoute, PAGES, ROLE }
