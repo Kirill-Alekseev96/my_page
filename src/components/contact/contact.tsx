@@ -1,11 +1,14 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Example } from '../spinner/spinner-form';
 
 type ContactType = {
   onClose: () => void;
 };
 export default function Contact({onClose}:ContactType) {
     
+    const [isLoading, setIsLoading] = useState(false); 
+
     const YOUR_PUBLIC_KEY:string = 'Wy6_ryLnjhWXKOZ0T';
     const YOUR_SERVICE_ID:string = 'service_ip7eo26';
     const YOUR_TEMPLATE_ID: string = 'template_jgk5mvn';
@@ -14,8 +17,9 @@ export default function Contact({onClose}:ContactType) {
 
     const sendEmail = (event:React.SyntheticEvent) => {
         event.preventDefault();
+        setIsLoading(true);
 
-    // Устанавливаем текущую дату
+        // Устанавливаем текущую дату
         const now = new Date();
         const formattedTime = now.toLocaleString('ru-RU');
         form.current!.time.value = formattedTime;
@@ -29,11 +33,13 @@ export default function Contact({onClose}:ContactType) {
             console.log('SUCCESS!');
             onClose();
             form.current!.reset();
-            },
-            (error) => {
-            console.log('FAILED...', error.text);
-            },
-        );
+        })
+        .catch((error) => {
+            console.log(error.message);
+        })
+        .finally(() => {
+            setIsLoading(false); 
+        });
     };
 
     return (
@@ -62,10 +68,14 @@ export default function Contact({onClose}:ContactType) {
                 
                     <div className='contact__container-inner'>
                         <label className='contact__label'>Сообщение</label>
-                        <textarea className='contact__message' name="contact__message" required></textarea>
+                        <textarea className='contact__message' name="message" required></textarea>
                     </div>
                     <button onClick = {onClose} className="contact__close-button" aria-label="закрыть"></button>
-                    <input className = 'contact__button button' type="submit" value="Отправить"/>
+                    <div  className='contact__container-wrap'>
+                        {isLoading && <Example/>}
+                        <input className = 'contact__button button' type="submit" value={isLoading ? "Отправка..." : "Отправить"} disabled={isLoading}/>
+                    </div>
+                   
                 </form>
             </div>
         </section>

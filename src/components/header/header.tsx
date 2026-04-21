@@ -13,7 +13,7 @@ export default function Header () {
     return (
         <header className="header">
             <div className="header__container">
-                <img className="header__logo" src="" alt="Logo" />
+                <img className="header__logo" src="/images/LOGO.png" alt="Logo" />
                 
                 <nav className="header__nav">
                     <ul className="header__list">
