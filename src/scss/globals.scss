@@ -48,6 +48,7 @@ body {
 }
 
 h1,h2,h3 {
+    font-family: var(--font-family-base);
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
     color: var(--color-white);

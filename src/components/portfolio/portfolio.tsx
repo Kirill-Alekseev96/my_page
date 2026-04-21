@@ -36,8 +36,8 @@ export default function Portfolio({projectsData}:PortfolioProps) {
 
                 {projectsData.map((project) => (
                     <>
-                        <li className="projects__item">
-                            <img className="projects__image" onClick = {() => handleOpenSlider(project.id)} src={project.previewImage} alt={project.title}/>
+                        <li className="projects__item" onClick = {() => handleOpenSlider(project.id)}>
+                            <img className="projects__image" src={project.previewImage} alt={project.title}/>
                     
                             <div className="projects__content">
                                 <h3 className="projects__title">{project.title}</h3>

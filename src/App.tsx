@@ -22,7 +22,9 @@ export default function App() {
           <Route path={AppRoute.Skills} element={<Skills/>}/>
           <Route path={AppRoute.Portfolio} element={<Portfolio projectsData={projectsData}/>}/>
         </Routes>
+        
       </main>
+      
     </BrowserRouter>
   )
 }
