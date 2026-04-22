@@ -1,13 +1,17 @@
-@use 'normalize.css';
+@import 'normalize.css';
 
-@use './scss/fonts';
-@use './scss/variables';
-@use './scss/globals.scss';
-@use './scss/mixins';
-@use './components/header/style-header';
-@use './components/home/style-home';
-@use './components/skills/style-skills';
-@use './components/portfolio/style-portfolio';
-@use './components/slider/style-slider';
-@use './components/experience/style-experience';
-@use './components/contact/stule-contact';
+@import './scss/functions.scss';
+@import './scss/variables';
+@import './scss/mixins';
+@import './scss/media';
+
+@import './scss/fonts';
+@import './scss/globals.scss';
+
+@import './components/header/style-header';
+@import './components/home/style-home';
+@import './components/skills/style-skills';
+@import './components/portfolio/style-portfolio';
+@import './components/slider/style-slider';
+@import './components/experience/style-experience';
+@import './components/contact/stule-contact';

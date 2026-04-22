@@ -35,7 +35,7 @@ export default function Skills () {
                             Асинхронность<br/>(Promises, async/await)
                         </li>
                         <li className="skills__item-inner">
-                            Работа с API(fetch, REST)
+                            Работа с API<br/>(fetch, REST)
                         </li>
                         <li className="skills__item-inner">
                             React(библиотека для интерфейсов)

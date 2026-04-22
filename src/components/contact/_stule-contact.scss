@@ -6,11 +6,17 @@
 
     &__container {
         position: relative;
-        width: 400px;
-        height: 600px;
+        width: 500px;
+        height: 700px;
         border-radius: 8px;
         background: var(--color-black); 
         overflow: hidden;
+
+        @include desktop {
+            margin-top: 20px;
+            width: 300px;
+            height: 500px;
+        }
         
     }
 
@@ -20,8 +26,8 @@
         inset: -2px;
         top: -50%;
         left: -50%;
-        width: 400px;
-        height: 600px; 
+        width: 500px;
+        height: 700px; 
         background: linear-gradient(0deg, transparent, transparent, var(--color-grey-toxic), var(--color-grey-toxic), var(--color-grey-toxic));
         z-index: 0;
         transform-origin: bottom right;
@@ -64,21 +70,18 @@
         padding: 20px;
         gap: 20px;
         border-radius: 5px;
-        gap: 10px;
-        background: #2e2e2e;
+        background: #222222;
         z-index: 1;
+
+        @include desktop {
+            gap: 10px;
+        }
         
     }
 
-    &__heading {
-        text-align: center;
-        color: white;
-        letter-spacing: 5px;
-        color: var(--color-grey-toxic);
-    }
-
+    
     &__description {
-        font-size: 20px;
+        @include text-base;
         text-align: center;
         letter-spacing: 3px;
         color: var(--color-grey-toxic);
@@ -103,29 +106,31 @@
 
     &__label {
         letter-spacing: 6px;
-         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
-         );
-         background-clip: text;
-         color: transparent;
-        font-size: 16px;
+        @include text-base;
+        background-image: linear-gradient(
+        to right, var(--color-white), var(--color-grey-toxic)
+        );
+        background-clip: text;
+        color: transparent;
+        margin-left: 10px;
         min-width: 80px;
         align-self: start;
     }
 
     &__input {
         width: 100%;
-        padding: 5px 10px;
+        padding: 10px 10px;
         outline: none;
         border-radius: 8px;
         border: none;
-        font-size: 16px;
-        transition: 0.5s;
-        background-color: #f3f5e7;
+        @include text-sm;
+        transition: 0.8s;
+        background-color: #eceedf;
 
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
         }
+        
     }
 
     &__message {
@@ -133,10 +138,11 @@
         padding: 8px 12px;
         border-radius: 8px;
         border: none;
-        font-size: 16px;
+        @include text-sm;
         resize: vertical;
         min-height: 150px;   
-        background-color: #f3f5e7; 
+        background-color: #eceedf;
+        transition: 0.8s;
         
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
@@ -145,10 +151,7 @@
 
     &__button {
         display: flex;
-
         align-self: flex-end;
-        width: 200px;
-        padding: 10px 20px;
     }
 
     &__close-button {

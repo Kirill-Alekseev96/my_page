@@ -1,6 +1,4 @@
 .skills {
-    min-height: auto;
-    flex-wrap: wrap;
 
     &__heading {
         text-align: center;
@@ -17,10 +15,9 @@
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 400px;
+        @include flex-center;
+        flex-direction: column; 
+        width: 450px;
         padding: 50px;
         
         border-radius: 25px;
@@ -55,15 +52,25 @@
     
 
     &__item-inner {
+        position: relative;
         color: var(--color-black);
         text-align: center;
-        font-size: 20px;
         font-weight: var(--font-weight-bold);
         cursor: pointer;
 
         text-transform: var(--text-uppercase-uppercase);
-        font-size: 18px;
+        @include text-base;
         letter-spacing: 3px;
+    }
+
+    &__item-inner::before {
+        position: absolute;
+        right: 10px;
+        bottom: -10px;
+        left: 10px;
+        height: 2px;
+        background-color: var(--color-black);
+        content: '';
     }
 
     &__item-inner:not(:last-child) {
@@ -87,10 +94,9 @@
         background-color: var(--color-grey-toxic); 
         transition: transform 0.5s ease;
     }
-    
-    &__svg:not(:hover) {
-        transform: rotate(0deg);
-        transition: transform 0.3s ease;
+
+    &__item:hover &__item-inner::before {
+        background-color: var(--color-grey-toxic); 
     }
 
     &__svg-html {

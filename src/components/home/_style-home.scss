@@ -1,44 +1,39 @@
 @use '../../scss/mixins' as *;
 
 .home {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+   @include flex-row;
    align-items: center;
    min-height: auto;
    flex-wrap: wrap;
    padding: 50px 20px;
      
-      &__greeting {
-         display: inline-block;
+
+     &__content {
+        @include flex-column-between;
+        max-width: 800px;
+        flex: 1;
+     }
+
+     &__greeting {
          text-transform: var(--text-uppercase-uppercase);
          font-weight: var(--font-weight-normal);
-         font-size: 26px;
-         letter-spacing: 14px;
-         font-family: var(--font-family-base);  
+         letter-spacing: 14px; 
          font-weight: var(--font-weight-bold);
          background-image: linear-gradient(
             to right, var(--color-white), var(--color-grey-toxic)
          );
          background-clip: text;
          color: transparent;
-         display: inline-block;
+
+         @include text-xl;
 
       }
 
-      &__text {
-         font-size: 26px;  
+      &__text {  
          margin-top: 10px;
-         letter-spacing: 3px;         
+         letter-spacing: 3px; 
+         @include text-lg;        
       }
-
-     &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 730px;
-        flex: 1;
-     }
 
      &__heading {
          margin: 20px 0;
@@ -47,16 +42,13 @@
             to right, var(--color-white), var(--color-grey-toxic)
          );
          background-clip: text;
-         color: transparent;
-
+         color: transparent; 
      }
 
      &__description {
-        justify-content: center;
-        font-size: 26px;
-        line-height: 46px;
-        letter-spacing: 3px;
-        
+        line-height: 50px;
+        letter-spacing: 3px; 
+        @include text-lg;        
      }
 
      &__actions {
@@ -67,14 +59,7 @@
         margin-right: 20px;
      }
 
-     .button {
-        padding: 10px 30px;
-     }
-
      &__inner {
-         display: flex;
-         justify-content: center;
-         align-items: center;
          margin-left: auto;
      }
 

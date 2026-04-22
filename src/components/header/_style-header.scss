@@ -45,8 +45,8 @@
         text-transform: var(--text-uppercase-uppercase);
         font-weight: var(--font-weight-normal);
         padding: 30px;
-        font-size: 18px;
         letter-spacing: 6px;
+        font-size: clamp(calculate-rem(2px), 4vw, calculate-rem(24px));
     }
 
     &__link--active::before {

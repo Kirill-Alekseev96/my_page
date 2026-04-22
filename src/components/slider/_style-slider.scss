@@ -6,7 +6,7 @@
     transform: translate(-50%, -50%);
     z-index: 1000;
     margin-top: 35px;
-    width: 650px;
+    width: 800px;
 
     &__container {
         display: flex;
@@ -14,7 +14,7 @@
         align-items: center;
         border-radius: 50px 0 50px 0;
 
-        background: rgba(var(--color-white-rgb), 0.5);
+        background: rgba(var(--color-white-rgb), 0.2);
         box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
                     0 0 20px rgba(var(--color-white-rgb), 0.5),
                     inset 0 0 150px rgba(var(--color-black-rgb), 1);
@@ -25,13 +25,9 @@
         cursor: pointer;
     }
 
-    // &__container:hover {
-    //     box-shadow: 0 0 40px rgba(var(--color-white-rgb), 0.5);
-    // }
-
     &__container-wrapper {
         position: relative;
-        max-height: 57vh;
+        max-height: 50vh;
         overflow-y: auto;
         overflow-x: hidden;
     }
@@ -44,8 +40,8 @@
         left: 0;
         right: 0;
         transform: translateY(-50%); 
-        opacity: 0; // Полностью прозрачный
-        visibility: hidden; // Скрыт от взаимодействия
+        opacity: 0;
+        visibility: hidden;
         transition: all 0.5s ease;
         /*
             all - тип анимации (плавное ускорение/замедление)
@@ -62,13 +58,12 @@
 
     &__description-full{
         padding: 40px;
-        font-size: 14px;
-        line-height: 30px;
-        font-weight: var(--font-weight-bold);
+        @include text-base;
+        line-height: 40px;
         text-transform: var(--text-uppercase-uppercase);
-        letter-spacing: 5px;
+        letter-spacing: 4px;
         text-align: center; 
-        color: var(--color-white-rgb);
+        color: var(--color-white);
     }
 
     &__button {

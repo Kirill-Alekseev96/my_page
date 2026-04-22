@@ -29,26 +29,33 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family-base);
-    font-size: 24px;
+    font-family: var(--font-family-baseB);
     color: var(--color-white);
     background-color: var(--color-black-50);
     overflow: hidden;
+
+    @include desktop {
+        overflow: auto;
+    }
 }
 
 .page__main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1400px;
+    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     flex: 1;
+
+    @include desktop {
+        max-width: 1280px;
+        // padding: 0 16px;
+    }
 }
 
 h1,h2,h3 {
-    font-family: var(--font-family-base);
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
     color: var(--color-white);
@@ -57,16 +64,16 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: 40px;
+    @include text-2xl;
     color: var(--color-grey-toxic);
 }
 
 h2 {
-    font-size: 30px;
+    @include text-xl;
 }
 
 h3 {
-    font-size: 25px;
+    @include text-lg;
 }
 
 a {
@@ -90,20 +97,25 @@ img {
 }
 
 .button {
-    min-width: 200px;
-   
+    min-width: 100px;
+    font-family: var(--font-family-base);
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 16px;
-
+    @include text-sm;
+    margin-top: 5px;
     border: 2px solid var(--color-white);
     border-radius: 30px;
+    padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-black);
     box-shadow: 0 0 20px var(--color-grey-toxic), inset 0 0 20px var(--color-grey-toxic);
 
     cursor: pointer;
     transition: all 0.3s ease;
+
+    @include desktop {
+       padding: 5px 10px;
+    }
 }
 
 .button:hover {
