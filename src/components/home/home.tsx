@@ -57,7 +57,7 @@ export default function Home () {
         {!isOpenContact ? (
             <section className="home">
                 <div className="home__content">
-                    <span className="home__greeting">Привет</span>
+                    {/* <span className="home__greeting">Привет</span> */}
                     <span className="home__text">Меня зовут Кирилл Алексеев</span>
                     <h1 className="home__heading heading">Я Frontend {currentText}</h1>
                     <p className="home__description">
@@ -68,6 +68,9 @@ export default function Home () {
                     <div className="home__actions">
                         <button className="home__button--download button">скачать</button>
                         <button onClick={handleOpenContact} className="home__button--contact button">написать</button>
+                        <a className="home__phone" href="tel:+79506874336">
+                            <div className="home__phone-svg"></div>
+                        </a>
                     </div>
                 </div>
                 <div className="home__inner">

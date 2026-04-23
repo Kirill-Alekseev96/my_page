@@ -5,7 +5,7 @@ export default function ParticlesScene() {
         <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -5, pointerEvents: 'none'  }}>
             <Particles
                 particleColors={["#ffd8a4"]}
-                particleCount={500}
+                particleCount={1000}
                 particleSpread={10}
                 speed={0.1}
                 particleBaseSize={150}

@@ -46,7 +46,7 @@
         font-weight: var(--font-weight-normal);
         padding: 30px;
         letter-spacing: 6px;
-        font-size: clamp(calculate-rem(2px), 4vw, calculate-rem(24px));
+        @include text-base;
     }
 
     &__link--active::before {

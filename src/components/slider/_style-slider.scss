@@ -58,7 +58,7 @@
 
     &__description-full{
         padding: 40px;
-        @include text-base;
+        @include text-sm;
         line-height: 40px;
         text-transform: var(--text-uppercase-uppercase);
         letter-spacing: 4px;

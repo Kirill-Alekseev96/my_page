@@ -29,7 +29,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family-baseB);
+    font-family: var(--font-family-base);
     color: var(--color-white);
     background-color: var(--color-black-50);
     overflow: hidden;
@@ -97,12 +97,11 @@ img {
 }
 
 .button {
-    min-width: 100px;
+    width: 200px;
     font-family: var(--font-family-base);
     text-transform: uppercase;
     letter-spacing: 2px;
     @include text-sm;
-    margin-top: 5px;
     border: 2px solid var(--color-white);
     border-radius: 30px;
     padding: 10px 40px;
