@@ -1,56 +1,71 @@
-import { useEffect, useState } from "react";
-import Contact from "../contact/contact";
+import { useCallback, useEffect, useRef, useState } from "react";
+import MemorizedContact from "../contact/contact";
 import { ROLE } from "../../const";
+import { runHomeAnimations } from './split';
 
 export default function Home () {
 
     const [isOpenContact, setIsOpenContact] = useState(false);
     const [currentText, setCurrentText] = useState('');
+    const textRef = useRef('');
+    const countRef = useRef(0);
 
     useEffect(() => {
-    let count = 0;
-    let timeoutId:number;
+        runHomeAnimations();
+    }, []);
 
-    const textAr = ROLE.split('');
-    let newArray:string[] = [];
+    useEffect(() => {
 
-    const animate = () => {
+        let timeoutId: number;
+        let isDeleting = false;
+
+        const textAr = ROLE.split('');
+
+        const animate = () => {
+            if (!isDeleting) {
+                // Режим печати
+                if (countRef.current < textAr.length) {
+                    textRef.current += textAr[countRef.current];
+                    setCurrentText(textRef.current);
+                    countRef.current++;
+                    timeoutId = setTimeout(animate, 100);
+                } else {
+                    // Завершили печать, ждём 2 секунды и начинаем удаление
+                    isDeleting = true;
+                    timeoutId = setTimeout(animate, 3000);
+                }
+            } else {
+                // Режим удаления
+                if (textRef.current.length > 0) {
+                    textRef.current = textRef.current.slice(0, -1);
+                    setCurrentText(textRef.current);
+                    timeoutId = setTimeout(animate, 100);
+                } else {
+                    isDeleting = false;
+                    countRef.current = 0;
+                    timeoutId = setTimeout(animate, 3000);
+                }
+            }
+        };
         
-        if (count < textAr.length) {
-            newArray.push(textAr[count]);
-            setCurrentText(newArray.join(''));
-            count++;
-            timeoutId = setTimeout(animate, 150);
-        } else {
-            timeoutId = setTimeout(() => {
+        animate();
 
-                count = 0;
-                newArray = [];  // Очищаем массив
-                setCurrentText('');
-                animate();
-            }, 2000);
-        }
-    };
-    
-    animate();
-
-    return () => {
-
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-    };
-}, []);
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        };
+    }, []);
     
 
 
-    const handleOpenContact = () => {
+    const handleOpenContact = useCallback(() => {
         setIsOpenContact(true);
-    }
+    },[]);
 
-    const handleCloseContact = () => {
+    const handleCloseContact = useCallback(() => {
         setIsOpenContact(false);
-    }
+    }, []);
 
     return (
     <>
@@ -80,7 +95,7 @@ export default function Home () {
         ) : (
             <>
                 <div className="slider-backdrop" onClick={handleCloseContact} />
-                <Contact onClose={handleCloseContact}/>
+                <MemorizedContact onClose={handleCloseContact}/>
             </>
         )}
     </>

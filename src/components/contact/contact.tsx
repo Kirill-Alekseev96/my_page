@@ -1,11 +1,11 @@
-import { useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Example } from '../spinner/spinner-form';
 
 type ContactType = {
   onClose: () => void;
 };
-export default function Contact({onClose}:ContactType) {
+function Contact({onClose}:ContactType) {
     
     const [isLoading, setIsLoading] = useState(false); 
 
@@ -81,3 +81,7 @@ export default function Contact({onClose}:ContactType) {
         </section>
     )
 }
+
+const MemorizedContact = memo(Contact);
+
+export default MemorizedContact;
