@@ -36,22 +36,22 @@
 
 //очень маленький
 @mixin text-xs {
-    font-size: clamp(calculate-rem(12px), 2vw, calculate-rem(14px));
+    font-size: clamp(calculate-rem(8px), 2vw, calculate-rem(14px));
 }
 
 //маленький
 @mixin text-sm {
-    font-size: clamp(calculate-rem(14px), 3vw, calculate-rem(18px));
+    font-size: clamp(calculate-rem(5px), 3vw, calculate-rem(18px));
 }
 
 //основной
 @mixin text-base {
-    font-size: clamp(calculate-rem(16px), 4vw, calculate-rem(22px));
+    font-size: clamp(calculate-rem(14px), 4vw, calculate-rem(22px));
 }
 
 //большой
 @mixin text-lg {
-    font-size: clamp(calculate-rem(18px), 5vw, calculate-rem(30px));
+    font-size: clamp(calculate-rem(16px), 4vw, calculate-rem(30px));
 }
 
 //очень большой
@@ -61,5 +61,5 @@
 
 // в 2 раза больше
 @mixin text-2xl {
-    font-size: clamp(calculate-rem(32px), 8vw, calculate-rem(48px));
+    font-size: clamp(calculate-rem(20px), 5vw, calculate-rem(48px));
 }

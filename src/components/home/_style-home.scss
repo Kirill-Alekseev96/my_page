@@ -1,17 +1,27 @@
-@use '../../scss/mixins' as *;
 
 .home {
-   @include flex-row;
-   align-items: center;
-   min-height: auto;
-   flex-wrap: wrap;
-   padding: 50px 20px;
-   background: rgba(var(--color-white-rgb), 0.2);
-        box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
+    position: relative;
+    @include flex-row;
+    align-items: center;
+    min-height: auto;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 50px 20px;
+    background: rgba(var(--color-white-rgb), 0.2);
+    box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
                 0 0 20px rgba(var(--color-white-rgb), 0.5),
                 inset 0 0 150px rgba(var(--color-black-rgb), 1);
-                padding: 40px;
-                border-radius: 25px;
+    padding: 40px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    @include mobile {
+        display: grid; 
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: 70px 70px 1fr 50px;
+        padding: 10px;
+        gap: 10px;
+    }
      
 
      &__content {
@@ -19,23 +29,45 @@
         max-width: 920px;
         flex: 1;
         padding: 50px;
+
+        @include mobile {
+            display: contents;
+            padding: 0px;
+        }
+
      }
 
+
       &__text {  
+        display: block;
          margin-top: 10px;
          letter-spacing: 3px; 
-         @include text-lg;        
+         @include text-lg;   
+
+         @include mobile {
+            margin: 0;
+            grid-column: 1 / 2;   
+            grid-row: 1 / 2;
+            line-height: 25px;
+        }
       }
 
      &__heading {
-         margin: 20px 0;
-         letter-spacing: 6px;
-         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
-         );
-         background-clip: text;
-         color: transparent; 
-         
+        margin: 20px 0;
+        letter-spacing: 6px;
+        background-image: linear-gradient(
+        to right, var(--color-white), var(--color-grey-toxic)
+        );
+        background-clip: text;
+        color: transparent;      
+        
+        @include mobile {
+            letter-spacing: 3px;
+            margin: 0px;
+            grid-column: 1 / 2;  
+            grid-row: 2 / 3;
+        }
+
      }
 
      &__heading::after {
@@ -54,28 +86,42 @@
      &__description {
         line-height: 50px;
         letter-spacing: 3px; 
-        @include text-lg;        
+        @include text-lg;   
+        
+        @include mobile {
+            text-align: start;
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+            letter-spacing: 5px;
+            line-height: 25px;
+        }
      }
-
-     &__actions {
-         margin-top: 50px;
-     }
-
-   //   &__button--download {
-   //      margin-right: 20px;
-   //   }
 
      &__inner {
-         margin-left: auto;
+
+         @include mobile {
+            grid-column: 2 / -1;
+            grid-row: 1 / 3;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
      }
 
      &__actions {
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-      gap: 20px;
-     }
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+         margin-top: 50px;
+
+        @include mobile {
+        margin: 0;
+        grid-column: 1 / -1;
+        grid-row: 4 / -1;
+        }
+    }
 
      &__image{
       position: relative;
@@ -88,7 +134,16 @@
         box-shadow: 
                 inset 0 0 500px rgba(var(--color-black-rgb), 0.1),
                 0 0 20px var(--color-grey-toxic), inset 0 0 20px var(--color-grey-toxic);
+
+        @include mobile {
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
      }
+
 
      &__phone {
          width: 44px;
@@ -103,6 +158,11 @@
          box-shadow: 
                   inset 0 0 500px rgba(var(--color-black-rgb), 0.1),
                   0 0 20px var(--color-grey-toxic), inset 0 0 20px var(--color-grey-toxic);
+
+        @include mobile {
+            width: 35px;
+            height: 35px;
+        }
      }
 
      &__phone:hover {
@@ -119,5 +179,6 @@
         transition: background-color 0.3s ease;
         mask-image: url('/icons/phone.svg');
         -webkit-mask-image: url('/icons/phone.svg');
+
     }
 }

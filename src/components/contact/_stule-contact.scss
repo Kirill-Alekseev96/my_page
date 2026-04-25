@@ -130,6 +130,10 @@
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
         }
+
+        @include mobile {
+            padding: 5px 10px;
+        }
         
     }
 
@@ -146,6 +150,10 @@
         
         &:focus {
             outline: 2px solid var(--color-grey-toxic);
+        }
+
+        @include mobile {
+            min-height: 100px;
         }
     }
 
