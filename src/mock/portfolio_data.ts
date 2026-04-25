@@ -5,10 +5,10 @@ export const projectsData: PortfolioDataType[] = [
     id: '1',
     title: 'HTML/CSS',
     description: 'Вёрстка и стилизация',
-    previewImage: 'public/images/preview2_html-css.jpg',
+    previewImage: '/my_page/images/preview2_html-css.jpg',
     images: [
       { 
-        src: '/images/HTML_CSS_1а.png',
+        src: '/my_page/images/HTML_CSS_1а.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
@@ -16,7 +16,7 @@ export const projectsData: PortfolioDataType[] = [
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: '/images/HTML_CSS_3.png',
+        src: '/my_page/images/HTML_CSS_3.png',
         alt: 'Планшетная версия интерфейса',
       }
     ],
@@ -26,14 +26,14 @@ export const projectsData: PortfolioDataType[] = [
     id: '2',
     title: 'JS',
     description: 'Интерактивность и логика',
-    previewImage: '/images/preview2_js.jpg',
+    previewImage: '/my_page/images/preview2_js.jpg',
     images: [
       { 
-        src: '/images/inst_2.png',
+        src: '/my_page/images/inst_2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: '/images/inst_3.png',
+        src: '/my_page/images/inst_3.png',
         alt: 'Планшетная версия интерфейса',
       }
     ],
@@ -43,22 +43,22 @@ export const projectsData: PortfolioDataType[] = [
     id: '3',
     title: 'JS + REACT + TS',
     description: 'Компонентный подход и типизация',
-    previewImage: '/images/preview2_react.jpg',
+    previewImage: '/my_page/images/preview2_react.jpg',
     images: [
       { 
-        src: '/images/1.png',
+        src: '/my_page/images/1.png',
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: '/images/2.png',
+        src: '/my_page/images/2.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
-        src: '/images/3.png',
+        src: '/my_page/images/3.png',
         alt: 'Планшетная версия интерфейса',
       },
       { 
-        src: '/images/4.png',
+        src: '//my_page/images/4.png',
         alt: 'Планшетная версия интерфейса',
       }
     ],

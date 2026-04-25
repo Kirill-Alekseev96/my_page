@@ -16,7 +16,9 @@
         gap: 50px;
         align-items: stretch;
         flex-wrap: wrap;
+        margin-bottom: 20px
     }
+
 
     &__item {
         @include flex-center;
@@ -34,6 +36,11 @@
 
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
+
+        @include mobile {
+            width: 250px;
+            padding: 10px;
+        }
     }
 
     &__title {
@@ -61,36 +68,41 @@
         text-align: center;
         font-weight: var(--font-weight-bold);
         cursor: pointer;
+        padding-bottom: 20px;
 
         text-transform: var(--text-uppercase-uppercase);
         @include text-base;
         letter-spacing: 3px;
+
+        @include mobile {
+            @include text-sm;
+        }
     }
 
     &__item-inner::before {
         position: absolute;
         right: 10px;
-        bottom: -10px;
+        bottom: 10px;
         left: 10px;
         height: 2px;
-        background-color: var(--color-black);
+        background-color: var(--color-grey-toxic);
         content: '';
-    }
-
-    &__item-inner:not(:last-child) {
-        margin-bottom: 20px;
     }
 
     &__svg {
 
         width: 40px;
         height: 40px;
-        margin-top: 10px;
-        background-color: var(--color-black);
+        background-color: var(--color-grey-toxic);
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
         transition: background-color 0.3s ease;
+
+        @include mobile {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &__item:hover &__svg {
@@ -117,4 +129,23 @@
         mask-image: url('/icons/setting.svg');
         -webkit-mask-image: url('/icons/setting.svg');
     }
+
+
+    @include mobile {
+        &__item:hover {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        &__item:hover &__svg {
+            transform: rotate(0deg);
+            background-color: transparent;
+            transition: none;
+        }
+
+        &__item:hover &__item-inner::before {
+            background-color: transparent;
+        }
+    }
 }
+

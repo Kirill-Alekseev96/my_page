@@ -8,5 +8,5 @@ export default defineConfig({
     outDir: 'docs',
     sourcemap: true,
   },
-  base: './',
+  base: '/my_page/',
 });

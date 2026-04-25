@@ -88,7 +88,7 @@ export default function Home () {
                     </div>
                 </div>
                 <div className="home__inner">
-                    <img className="home__image" src='/images/IMG_4786.png' alt="zxcc" />
+                    <img className="home__image" src='/my_page/images/IMG_4786.png' alt="zxcc" />
                 </div>
             </section>
         ) : (

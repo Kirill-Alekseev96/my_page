@@ -9,7 +9,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -24,7 +23,9 @@
         flex-wrap: wrap;
 
         @include mobile {
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
 
         }
     }
@@ -37,10 +38,20 @@
 
     &__item:hover {
         background-color: var(--color-white);
+
+        @include mobile {
+            background-color: transparent;
+
+        }
     }
 
     &__item:hover &__link {
-        color: var(--color-black);   
+        color: var(--color-black);  
+        
+        @include mobile {
+            color: var(--color-white);
+
+        }
     }
 
     &__link {
@@ -64,6 +75,11 @@
         height: 4px;
         background-color: var(--color-grey-toxic);
         content: '';
+
+        @include mobile {
+            height: 2px;
+
+        }
     }
 
     &__theme-btn {

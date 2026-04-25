@@ -8,6 +8,11 @@
     margin-top: 35px;
     width: 800px;
 
+    @include mobile {
+        width: 350px;
+        margin-top: 50px;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -48,11 +53,17 @@
             0.3s - длительность анимации (0.3 секунды)
             ease - какие свойства анимировать (все)
         */
+
+        @include mobile {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__container:hover &__container-button {
         opacity: 1;
         visibility: visible;
+        
     }
 
 
@@ -64,6 +75,10 @@
         letter-spacing: 4px;
         text-align: center; 
         color: var(--color-white);
+
+        @include mobile {
+            line-height: 20px;
+        }
     }
 
     &__button {
@@ -78,6 +93,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     &__close-button {
@@ -119,6 +139,11 @@
          );
         mask: url('/icons/arrow-left.svg') no-repeat center/contain;
         -webkit-mask: url('/icons/arrow-left.svg') no-repeat center/contain;
+
+        @include mobile {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     .next__button:before {
@@ -131,5 +156,10 @@
          );
         mask: url('/icons/arrow-left.svg') no-repeat center/contain;
         -webkit-mask: url('/icons/arrow-right.svg') no-repeat center/contain;
+
+        @include mobile {
+            width: 30px;
+            height: 30px;
+        }
     }
 }

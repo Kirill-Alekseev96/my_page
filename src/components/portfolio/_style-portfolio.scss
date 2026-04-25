@@ -31,6 +31,10 @@
 
     &__item:hover {
          transform: translateY(-20px);
+
+         @include mobile {
+            transform: translateY(0);
+        }
     }
 
 
