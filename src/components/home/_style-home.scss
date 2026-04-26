@@ -14,8 +14,9 @@
     overflow: hidden;
 
     @include mobile {
+        justify-content: center;
         margin: 15px 0 10px 0;
-        padding: 0;
+        padding: 20px;
         gap: 10px;
     }
      
@@ -31,7 +32,7 @@
             justify-content: center;
             align-items: center;
             order: 1;
-            padding: 10px;
+            padding: 0;
         }
 
      }
@@ -61,6 +62,7 @@
         color: transparent;      
         
         @include mobile {
+            text-align: center;
             width: 250px;
             height: 70px;
             letter-spacing: 2px;
@@ -132,10 +134,8 @@
 
         @include mobile {
             display: block;
-            margin: 0 auto;
-            flex: 1;
-            height: 420px;
-            border-radius: 25px 25px 0 0;
+            width: 250px;
+            height: 300px;
             object-fit: cover;
         }
      }

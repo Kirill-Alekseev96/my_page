@@ -94,8 +94,8 @@ img {
 }
 
 .button {
-    width: 200px;
-    font-family: var(--font-family-base);
+    // width: 200px;
+    font-family: var(--font-family-2xl);
     text-transform: uppercase;
     letter-spacing: 2px;
     @include text-sm;
@@ -110,8 +110,8 @@ img {
     transition: all 0.3s ease;
 
     @include mobile {
-        padding: 5px 10px;
-        width: 120px;
+        padding: 10px 20px;
+        // width: 100px;
     }
 }
 
