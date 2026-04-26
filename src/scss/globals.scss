@@ -94,7 +94,7 @@ img {
 }
 
 .button {
-    max-width: 200px;
+    width: 200px;
     font-family: var(--font-family-base);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -109,13 +109,9 @@ img {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    @include desktop {
-       padding: 5px 10px;
-    }
-
     @include mobile {
-        border: 2px solid var(--color-white);
-       width: 120px;
+        padding: 5px 10px;
+        width: 120px;
     }
 }
 
