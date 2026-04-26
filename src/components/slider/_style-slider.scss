@@ -7,6 +7,7 @@
     z-index: 1000;
     margin-top: 35px;
     width: 800px;
+    max-height: 90vh;
 
     @include mobile {
         width: 350px;
@@ -14,6 +15,7 @@
     }
 
     &__container {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +33,6 @@
     }
 
     &__container-wrapper {
-        position: relative;
         max-height: 50vh;
         overflow-y: auto;
         overflow-x: hidden;
@@ -41,7 +42,7 @@
         position: absolute;
         display: flex;
         justify-content: space-between;
-        top: 50%;
+        top: 33%;
         left: 0;
         right: 0;
         transform: translateY(-50%); 

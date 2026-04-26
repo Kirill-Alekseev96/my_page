@@ -85,7 +85,7 @@
         bottom: 10px;
         left: 10px;
         height: 2px;
-        background-color: var(--color-grey-toxic);
+        background-color: var(--color-black);
         content: '';
     }
 
@@ -93,7 +93,7 @@
 
         width: 40px;
         height: 40px;
-        background-color: var(--color-grey-toxic);
+        background-color: var(--color-black);
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
@@ -128,24 +128,6 @@
     &__svg-setting {
         mask-image: url('/icons/setting.svg');
         -webkit-mask-image: url('/icons/setting.svg');
-    }
-
-
-    @include mobile {
-        &__item:hover {
-            transform: translateY(0);
-            box-shadow: none;
-        }
-
-        &__item:hover &__svg {
-            transform: rotate(0deg);
-            background-color: transparent;
-            transition: none;
-        }
-
-        &__item:hover &__item-inner::before {
-            background-color: transparent;
-        }
     }
 }
 

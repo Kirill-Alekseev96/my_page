@@ -114,7 +114,8 @@ img {
     }
 
     @include mobile {
-       width: 100px;
+        border: 2px solid var(--color-white);
+       width: 120px;
     }
 }
 

@@ -13,7 +13,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 export default function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/my_page/">
       <ParticlesScene/>
       <Header/>
       <main className='page__main'>

@@ -12,7 +12,7 @@ export const projectsData: PortfolioDataType[] = [
         alt: 'Главная страница сайта на десктопе',
       },
       { 
-        src: '/images/HTML_CSS_2а.png',
+        src: '/my_page/images/HTML_CSS_2а.png',
         alt: 'Мобильная адаптация сайта',
       },
       { 
@@ -58,7 +58,7 @@ export const projectsData: PortfolioDataType[] = [
         alt: 'Планшетная версия интерфейса',
       },
       { 
-        src: '//my_page/images/4.png',
+        src: '/my_page/images/4.png',
         alt: 'Планшетная версия интерфейса',
       }
     ],
