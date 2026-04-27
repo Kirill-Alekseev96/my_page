@@ -34,7 +34,7 @@ body {
     background-color: var(--color-black-50);
     overflow: hidden;
 
-    @include desktop {
+    @include mobile-landscape {
         overflow: auto;
     }
 }
@@ -95,10 +95,10 @@ img {
 
 .button {
     // width: 200px;
-    font-family: var(--font-family-2xl);
+    font-family: var(--font-family-base);
     text-transform: uppercase;
     letter-spacing: 2px;
-    @include text-sm;
+    @include text-xs;
     border: 2px solid var(--color-white);
     border-radius: 30px;
     padding: 10px 40px;
@@ -109,9 +109,8 @@ img {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    @include mobile {
-        padding: 10px 20px;
-        // width: 100px;
+    @include mobile-portrait {
+        padding: 5px 20px;
     }
 }
 

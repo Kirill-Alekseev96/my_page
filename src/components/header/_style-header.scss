@@ -22,7 +22,7 @@
         display: flex;
         flex-wrap: wrap;
 
-        @include mobile {
+        @include mobile-portrait {
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -39,7 +39,7 @@
     &__item:hover {
         background-color: var(--color-white);
 
-        @include mobile {
+        @include mobile-portrait {
             background-color: transparent;
 
         }
@@ -48,7 +48,7 @@
     &__item:hover &__link {
         color: var(--color-black);  
         
-        @include mobile {
+        @include mobile-portrait {
             color: var(--color-white);
 
         }
@@ -62,7 +62,7 @@
         letter-spacing: 6px;
         @include text-base;
 
-        @include mobile {
+        @include mobile-portrait {
             padding: 10px 20px;
         }
     }
@@ -76,7 +76,7 @@
         background-color: var(--color-grey-toxic);
         content: '';
 
-        @include mobile {
+        @include mobile-portrait {
             height: 2px;
 
         }

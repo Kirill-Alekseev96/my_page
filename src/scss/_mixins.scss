@@ -36,30 +36,48 @@
 
 //очень маленький
 @mixin text-xs {
-    font-size: clamp(calculate-rem(8px), 2vw, calculate-rem(14px));
+    font-size: clamp(calculate-rem(12px), 2vw, calculate-rem(14px));
 }
 
 //маленький
 @mixin text-sm {
-    font-size: clamp(calculate-rem(10px), 3vw, calculate-rem(18px));
+    font-size: clamp(calculate-rem(14px), 3vw, calculate-rem(16px));
 }
 
 //основной
 @mixin text-base {
-    font-size: clamp(calculate-rem(18px), 3vw, calculate-rem(24px));
+    font-size: clamp(calculate-rem(16px), 3vw, calculate-rem(18px));
 }
 
 //большой
 @mixin text-lg {
-    font-size: clamp(calculate-rem(22px), 4vw, calculate-rem(30px));
+    font-size: clamp(calculate-rem(20px), 4vw, calculate-rem(24px));
 }
 
 //очень большой
 @mixin text-xl {
-    font-size: clamp(calculate-rem(25px), 5vw, calculate-rem(36px));
+    font-size: clamp(calculate-rem(24px), 5vw, calculate-rem(32px));
 }
 
 // в 2 раза больше
 @mixin text-2xl {
-    font-size: clamp(calculate-rem(30px), 5vw, calculate-rem(48px));
+    font-size: clamp(calculate-rem(32px), 5vw, calculate-rem(48px));
+}
+
+/*Тени*/
+
+@mixin neon-shadow {
+    background: rgba(var(--color-white-rgb), 0.2);
+    box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
+                0 0 20px rgba(var(--color-white-rgb), 0.5),
+                inset 0 0 150px rgba(var(--color-black-rgb), 1);
+}
+
+/*Текст*/
+@mixin gradient-text {
+    background-image: linear-gradient(
+        to right, var(--color-white), var(--color-grey-toxic)
+        );
+    background-clip: text;
+    color: transparent;    
 }

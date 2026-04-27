@@ -5,7 +5,7 @@
         margin: 80px 0;
         letter-spacing: 10px;
 
-        @include mobile {
+        @include mobile-portrait {
             margin: 30px 0;
         }
     }
@@ -37,7 +37,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
 
-        @include mobile {
+        @include mobile-portrait {
             width: 250px;
             padding: 10px;
         }
@@ -74,7 +74,7 @@
         @include text-base;
         letter-spacing: 3px;
 
-        @include mobile {
+        @include mobile-portrait {
             @include text-sm;
         }
     }
@@ -99,7 +99,7 @@
         mask-position: center;
         transition: background-color 0.3s ease;
 
-        @include mobile {
+        @include mobile-portrait {
             width: 30px;
             height: 30px;
         }

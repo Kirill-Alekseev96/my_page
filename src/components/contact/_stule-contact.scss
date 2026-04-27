@@ -12,11 +12,11 @@
         background: var(--color-black); 
         overflow: hidden;
 
-        @include desktop {
-            margin-top: 20px;
-            width: 300px;
-            height: 500px;
-        }        
+        // @include desktop {
+        //     margin-top: 20px;
+        //     width: 300px;
+        //     height: 500px;
+        // }        
     }
 
     &__container::before {
@@ -72,9 +72,9 @@
         background: #222222;
         z-index: 1;
 
-        @include desktop {
-            gap: 10px;
-        }
+        // @include desktop {
+        //     gap: 10px;
+        // }
         
     }
 
@@ -130,7 +130,7 @@
             outline: 2px solid var(--color-grey-toxic);
         }
 
-        @include mobile {
+        @include mobile-portrait {
             padding: 5px 10px;
         }
         
@@ -151,7 +151,7 @@
             outline: 2px solid var(--color-grey-toxic);
         }
 
-        @include mobile {
+        @include mobile-portrait {
             min-height: 100px;
         }
     }

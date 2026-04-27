@@ -5,7 +5,7 @@
         margin: 80px 0;
         letter-spacing: 10px;
 
-        @include mobile {
+        @include mobile-portrait {
             margin: 40px 0;
         }
     }
@@ -32,7 +32,7 @@
     &__item:hover {
          transform: translateY(-20px);
 
-         @include mobile {
+         @include mobile-portrait {
             transform: translateY(0);
         }
     }

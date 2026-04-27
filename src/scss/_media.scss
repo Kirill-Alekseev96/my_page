@@ -1,10 +1,18 @@
-$mobile: 490px;
-$laptop: 1024px;
-$desktop: 1280px;
-$ultrawide: 1600px;
+$mobile-portrait: 576px;   // вертикальные телефоны
+$mobile-landscape: 900px;  // горизонтальные телефоны (все модели)
+$tablet: 1024px;
+$laptop: 1280px;
+$wide: 1440px;       // широкие
+$ultrawide: 1600px;  // ультраширокие
 
-@mixin mobile {
-    @media (max-width: $mobile) {
+@mixin mobile-portrait {
+    @media (max-width: $mobile-portrait) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (max-width: $mobile-landscape) {
         @content;
     }
 }
