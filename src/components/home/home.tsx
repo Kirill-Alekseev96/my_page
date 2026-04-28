@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import MemorizedContact from "../contact/contact";
 import { ROLE } from "../../const";
 import { runHomeAnimations } from './split';
+import Social from "../social/social";
 
 export default function Home () {
 
@@ -82,9 +83,7 @@ export default function Home () {
                     <div className="home__actions">
                         <button className="home__button--download button">скачать</button>
                         <button onClick={handleOpenContact} className="home__button--contact button">написать</button>
-                        <a className="home__phone" href="tel:+79506874336">
-                            <div className="home__phone-svg"></div>
-                        </a>
+                        <Social/>
                     </div>
                 </div>
                 <div className="home__inner">

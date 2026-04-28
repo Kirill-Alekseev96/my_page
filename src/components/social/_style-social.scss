@@ -1,0 +1,56 @@
+.social {
+    display: flex;
+    justify-content: center;
+    &__list {
+        // display: none;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;              
+        align-items: center;        
+        justify-content: center; 
+        gap: 10px;
+        background: rgba(var(--color-black-rgb), 1);
+        border: 2px solid var(--color-white);
+        transition: transform 0.5s ease;
+        box-shadow: 
+            inset 0 0 500px rgba(var(--color-black-rgb), 0.1),
+            0 0 20px var(--color-grey-toxic), 
+            inset 0 0 20px var(--color-grey-toxic);
+
+        @include mobile-portrait {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    &__link:hover {
+        transform: translateY(-10px);
+    }
+
+    &__phone-svg {
+        mask-image: url('/icons/phone.svg');
+        -webkit-mask-image: url('/icons/phone.svg');
+    }
+
+    &__github-svg {
+        mask-image: url('/icons/github.svg');
+        -webkit-mask-image: url('/icons/github.svg');
+    }
+
+    &__vk-svg {
+        mask-image: url('/icons/vk.svg');
+        -webkit-mask-image: url('/icons/vk.svg');
+    }
+
+    &__telegram-svg {
+        mask-image: url('/icons/telegram.svg');
+        -webkit-mask-image: url('/icons/telegram.svg');
+    }
+}
+

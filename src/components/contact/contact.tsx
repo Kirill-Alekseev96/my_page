@@ -49,8 +49,6 @@ function Contact({onClose}:ContactType) {
     return (
         <section className="contact">
             <div className="contact__container">
-                {/* <h2 className="contact__heading visibility-hidden">Письмо</h2>
-                <p className="contact__description">отправить мне сообщение</p> */}
                 <form id="contact__form" className="contact__form" ref={form} onSubmit={sendEmail}>
                     <h2 className="contact__heading visually-hidden">Письмо</h2>
                     <p className="contact__description">отправить мне сообщение</p>

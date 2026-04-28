@@ -46,7 +46,7 @@
 
 //основной
 @mixin text-base {
-    font-size: clamp(calculate-rem(16px), 3vw, calculate-rem(18px));
+    font-size: clamp(calculate-rem(16px), 3vw, calculate-rem(20px));
 }
 
 //большой
