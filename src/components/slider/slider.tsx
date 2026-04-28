@@ -1,6 +1,7 @@
 import 'swiped-events';
 import { useCallback, useEffect, useState } from "react";
 import type { PortfolioDataType } from '../../types/type-data';
+import { useLockScroll } from '../../hooks/useLockScroll';
 
 interface SliderProps {
   project: PortfolioDataType;
@@ -10,18 +11,15 @@ interface SliderProps {
 export default function Slider ({project, onClose}:SliderProps) {
 
 
-    useEffect(() => {
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.body.style.overflow = '';
-    };
-    }, []);
+    
 
     const [slideIndex, setSlideIndex] = useState(0);
 
     const {images, fullDescription} = project;
 
     const slideCount = images.length;
+
+    useLockScroll();
 
     // Функция для показа предыдущего слайда
     const showPreviousSlide = useCallback(() => {

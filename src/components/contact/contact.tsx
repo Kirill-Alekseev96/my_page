@@ -1,6 +1,7 @@
 import { memo, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Example } from '../spinner/spinner-form';
+import { useLockScroll } from '../../hooks/useLockScroll';
 
 type ContactType = {
   onClose: () => void;
@@ -8,6 +9,7 @@ type ContactType = {
 function Contact({onClose}:ContactType) {
     
     const [isLoading, setIsLoading] = useState(false); 
+    
 
     const YOUR_PUBLIC_KEY:string = 'Wy6_ryLnjhWXKOZ0T';
     const YOUR_SERVICE_ID:string = 'service_ip7eo26';
@@ -41,6 +43,8 @@ function Contact({onClose}:ContactType) {
             setIsLoading(false); 
         });
     };
+
+    useLockScroll();
 
     return (
         <section className="contact">
