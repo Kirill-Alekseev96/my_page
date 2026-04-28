@@ -7,7 +7,6 @@
     @include neon-shadow;
     padding: 40px;
     border-radius: 25px;
-    overflow: hidden;
 
     @include mobile-landscape {
         flex-direction: row;
@@ -22,7 +21,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px 20px;
+        padding: 30px;
         gap: 20px;
     }
     
@@ -122,9 +121,9 @@
         margin-top: 50px;
 
         @include mobile-portrait {
-            margin: 30px 0 0 0;
+            margin-top: 30px;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             width: 100%;
         }
     }
@@ -168,6 +167,7 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
+        flex-shrink: 0;
         display: flex;              
         align-items: center;        
         justify-content: center; 

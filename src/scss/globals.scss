@@ -33,6 +33,14 @@ body {
     color: var(--color-white);
     background-color: var(--color-black-50);
     overflow: hidden;
+
+    @include mobile-landscape {
+       overflow: scroll; 
+    }
+
+    @include mobile-portrait {
+       overflow: scroll; 
+    }
 }
 
 .page__main {

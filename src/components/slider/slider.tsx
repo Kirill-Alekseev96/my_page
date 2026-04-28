@@ -1,8 +1,9 @@
-import { useState } from "react";
-import type { projectsDataType } from "../../types/type-data";
+import 'swiped-events';
+import { useCallback, useEffect, useState } from "react";
+import type { PortfolioDataType } from '../../types/type-data';
 
 interface SliderProps {
-  project: projectsDataType | null;
+  project: PortfolioDataType;
   onClose: () => void;
 }
 
@@ -10,24 +11,39 @@ export default function Slider ({project, onClose}:SliderProps) {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
-    if (!project) {
-        return null;
-    }
-
     const {images, fullDescription} = project;
 
     const slideCount = images.length;
 
     // Функция для показа предыдущего слайда
-    function showPreviousSlide() {
-    setSlideIndex((slideIndex - 1 + slideCount) % slideCount);
-    }
+    const showPreviousSlide = useCallback(() => {
+        setSlideIndex((prevIndex) => (prevIndex - 1 + slideCount) % slideCount);
+    }, [slideCount]);
 
     // Функция для показа следующего слайда
-    function showNextSlide() {
-    setSlideIndex((slideIndex + 1) % slideCount);
-    }
+    const showNextSlide = useCallback(() => {
+        setSlideIndex((prevIndex) => (prevIndex + 1) % slideCount);
+    }, [slideCount]);
 
+    useEffect(() => {
+
+        if (!project) return;
+
+        const element = document.querySelector('.slider__container-wrapper');
+        if (!element) return;
+
+        const handleSwipeLeft = () => showNextSlide();  
+        const handleSwipeRight = () => showPreviousSlide(); 
+
+        element?.addEventListener('swiped-left', handleSwipeLeft);
+        element?.addEventListener('swiped-right', handleSwipeRight);
+
+        return () => {
+            element?.removeEventListener('swiped-left', handleSwipeLeft);
+            element?.removeEventListener('swiped-right', handleSwipeRight);
+        }
+
+    },[]);
     
     return(
         <div className="slider">
@@ -39,6 +55,7 @@ export default function Slider ({project, onClose}:SliderProps) {
 
                         {images.map((image, index)=>(
                             <img className="slider__image" 
+                                key={index}
                                 src={image.src} 
                                 alt={image.alt} 
                                 style={{ display: index === slideIndex ? 'block' : 'none' }}
