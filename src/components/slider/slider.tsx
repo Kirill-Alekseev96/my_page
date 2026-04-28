@@ -9,6 +9,14 @@ interface SliderProps {
 
 export default function Slider ({project, onClose}:SliderProps) {
 
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = '';
+    };
+    }, []);
+
     const [slideIndex, setSlideIndex] = useState(0);
 
     const {images, fullDescription} = project;
