@@ -61,6 +61,10 @@
         padding: 30px;
         letter-spacing: 6px;
         @include text-base;
+        
+        @include mobile-landscape {
+            padding: 20px 20px;
+        }
 
         @include mobile-portrait {
             padding: 10px 20px;

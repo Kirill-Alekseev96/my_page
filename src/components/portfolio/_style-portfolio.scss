@@ -1,11 +1,15 @@
-.projects {
+.projects {  
+    
+    @include laptop {
+        margin: 20px 0;
+    }
     
     &__heading {
         text-align: center;
         margin: 80px 0;
         letter-spacing: 10px;
 
-        @include mobile-portrait {
+        @include laptop {
             margin: 40px 0;
         }
     }

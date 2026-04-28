@@ -37,6 +37,11 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
 
+        @include laptop {
+            width: 300px;
+            padding: 10px;
+        }
+
         @include mobile-portrait {
             width: 250px;
             padding: 10px;
