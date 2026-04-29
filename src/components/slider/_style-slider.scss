@@ -39,7 +39,9 @@
     }
 
     &__container-wrapper {
+        position: relative;
         height: 50vh;
+        scroll-behavior: smooth; 
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -53,14 +55,20 @@
         }
     }
 
+    &__counter {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+    }
+
     &__container-button {
         position: absolute;
         display: flex;
         justify-content: space-between;
-        top: 33%;
+        top: 50%;
         left: 0;
         right: 0;
-        transform: translateY(-50%); 
+        transform: translateY(50%); 
         opacity: 0;
         visibility: hidden;
         transition: all 0.5s ease;
@@ -114,9 +122,14 @@
 
     &__link {
         display: block;
+        text-transform: var(--text-uppercase-uppercase);
         text-align: center;
         @include gradient-text;
         margin-bottom: 20px;
+    }
+
+    &__link:hover {
+        opacity: 0.8;
     }
 
     &__button {

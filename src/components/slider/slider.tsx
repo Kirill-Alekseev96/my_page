@@ -2,6 +2,7 @@ import 'swiped-events';
 import { useCallback, useEffect, useState } from "react";
 import type { PortfolioDataType } from '../../types/type-data';
 import { useLockScroll } from '../../hooks/useLockScroll';
+import { useEscapeClose } from '../../hooks/useEscapeClose';
 
 interface SliderProps {
   project: PortfolioDataType;
@@ -20,6 +21,7 @@ export default function Slider ({project, onClose}:SliderProps) {
     const slideCount = images.length;
 
     useLockScroll();
+    useEscapeClose(onClose);
 
     // Функция для показа предыдущего слайда
     const showPreviousSlide = useCallback(() => {
@@ -49,13 +51,19 @@ export default function Slider ({project, onClose}:SliderProps) {
             element?.removeEventListener('swiped-right', handleSwipeRight);
         }
 
-    },[]);
+    },[showNextSlide, showPreviousSlide, project]);
     
     return(
         <div className="slider">
 
              <div className="slider__container">
                 <div className="slider__container-inner">
+
+                    <div className="slider__counter">
+                        <span className="slider__counter-current">{slideIndex + 1}</span>
+                        <span className="slider__counter-separator">/</span>
+                        <span className="slider__counter-total">{slideCount}</span>
+                    </div>
 
                     <div className="slider__container-wrapper">
 
@@ -74,7 +82,7 @@ export default function Slider ({project, onClose}:SliderProps) {
                         </div>
                     </div>  
                     <p className="slider__description-full">{fullDescription}</p> 
-                    <a className='slider__link' href={link}>сылка на проект</a> 
+                    <a className='slider__link' href={link}>сcылка на проект</a> 
                 </div>
             </div>
 

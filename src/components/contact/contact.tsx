@@ -2,6 +2,7 @@ import { memo, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Example } from '../spinner/spinner-form';
 import { useLockScroll } from '../../hooks/useLockScroll';
+import { useEscapeClose } from '../../hooks/useEscapeClose';
 
 type ContactType = {
   onClose: () => void;
@@ -45,6 +46,7 @@ function Contact({onClose}:ContactType) {
     };
 
     useLockScroll();
+    useEscapeClose(onClose);
 
     return (
         <section className="contact">
