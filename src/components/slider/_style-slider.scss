@@ -12,6 +12,8 @@
     @include mobile-landscape {
         top: 0;
         width: 100%;
+        max-height: none;  // Убираем ограничение высоты
+        height: auto;
     }
 
     &__container {
@@ -32,7 +34,7 @@
         cursor: pointer;
 
         @include mobile-landscape {
-           border-radius: 0;
+           border-radius: 20px;
         }
     }
 
@@ -42,7 +44,10 @@
         overflow-x: hidden;
 
         @include mobile-landscape {
+            max-height: 50vh;
+            height: auto; 
             overflow-x: auto;
+            overflow-y: visible;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
@@ -78,6 +83,15 @@
     }
 
 
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;  // Вся картинка помещается в контейнер
+        display: block;
+        margin: 0 auto;
+}
+
+
     &__description-full{
         padding: 40px;
         @include text-sm;
@@ -96,6 +110,13 @@
         @include mobile-portrait {
             line-height: 20px;
         }
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
+        @include gradient-text;
+        margin-bottom: 20px;
     }
 
     &__button {

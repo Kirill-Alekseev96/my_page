@@ -21,6 +21,7 @@ export const projectsData: PortfolioDataType[] = [
       }
     ],
     fullDescription: 'Разработана качественная вёрстка по предоставленному макету с соблюдением принципа Pixel Perfect — каждый пиксель точно соответствует дизайн-проекту.',
+    link: 'https://github.com/Kirill-Alekseev96/2437017-sedona-2',
   },
   {
     id: '2',
@@ -38,6 +39,7 @@ export const projectsData: PortfolioDataType[] = [
       }
     ],
     fullDescription: 'Реализована полноценная интерактивность на ванильном JavaScript (ES6+): динамический DOM, события, состояние через объекты/массивы, localStorage.',
+    link: 'https://github.com/Kirill-Alekseev96/2437017-kekstagram-2',
   },
   {
     id: '3',
@@ -63,5 +65,6 @@ export const projectsData: PortfolioDataType[] = [
       }
     ],
     fullDescription: 'Реализован компонентный подход на React + TypeScript с глобальным состоянием через Redux Toolkit, мемоизацией и типизированными запросами к бэкенду.',
+    link: 'https://github.com/Kirill-Alekseev96/2437017-six-cities-3',
   }
 ]

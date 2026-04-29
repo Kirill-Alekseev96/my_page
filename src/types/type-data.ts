@@ -11,4 +11,5 @@ export type PortfolioDataType = {
     previewImage: string;
     images: ImageType[],
     fullDescription: string;
+    link: string;
   }

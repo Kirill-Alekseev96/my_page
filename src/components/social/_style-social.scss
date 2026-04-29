@@ -5,6 +5,10 @@
         // display: none;
         display: flex;
         gap: 10px;
+
+        @include mobile-portrait {
+            margin-top: 20px;
+        }
     }
 
     &__link {

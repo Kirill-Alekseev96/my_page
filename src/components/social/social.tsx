@@ -1,4 +1,6 @@
-export default function Social () {
+import { memo } from "react";
+
+function Social () {
 
     return (
         <section className="social">
@@ -27,3 +29,7 @@ export default function Social () {
         </section>
     )
 }
+
+const MemorizedSocial = memo(Social);
+
+export default MemorizedSocial;

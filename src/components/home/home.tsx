@@ -1,64 +1,19 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MemorizedContact from "../contact/contact";
 import { ROLE } from "../../const";
 import { runHomeAnimations } from './split';
-import Social from "../social/social";
+import MemorizedSocial from "../social/social";
+import { useTypingAnimation } from "../../hooks/useTypingAnimation";
 
 export default function Home () {
 
     const [isOpenContact, setIsOpenContact] = useState(false);
-    const [currentText, setCurrentText] = useState('');
-    const textRef = useRef('');
-    const countRef = useRef(0);
+
+    const currentText = useTypingAnimation(ROLE, isOpenContact);
 
     useEffect(() => {
         runHomeAnimations();
     }, []);
-
-    useEffect(() => {
-
-        let timeoutId: number;
-        let isDeleting = false;
-
-        const textAr = ROLE.split('');
-
-        const animate = () => {
-            if (!isDeleting) {
-                // Режим печати
-                if (countRef.current < textAr.length) {
-                    textRef.current += textAr[countRef.current];
-                    setCurrentText(textRef.current);
-                    countRef.current++;
-                    timeoutId = setTimeout(animate, 100);
-                } else {
-                    // Завершили печать, ждём 2 секунды и начинаем удаление
-                    isDeleting = true;
-                    timeoutId = setTimeout(animate, 3000);
-                }
-            } else {
-                // Режим удаления
-                if (textRef.current.length > 0) {
-                    textRef.current = textRef.current.slice(0, -1);
-                    setCurrentText(textRef.current);
-                    timeoutId = setTimeout(animate, 100);
-                } else {
-                    isDeleting = false;
-                    countRef.current = 0;
-                    timeoutId = setTimeout(animate, 3000);
-                }
-            }
-        };
-        
-        animate();
-
-        return () => {
-            if (timeoutId) {
-                clearTimeout(timeoutId);
-            }
-        };
-    }, []);
-    
-
 
     const handleOpenContact = useCallback(() => {
         setIsOpenContact(true);
@@ -83,7 +38,7 @@ export default function Home () {
                     <div className="home__actions">
                         <button className="home__button--download button">скачать</button>
                         <button onClick={handleOpenContact} className="home__button--contact button">написать</button>
-                        <Social/>
+                        <MemorizedSocial/>
                     </div>
                 </div>
                 <div className="home__inner">

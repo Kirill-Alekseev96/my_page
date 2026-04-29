@@ -15,7 +15,7 @@ export default function Slider ({project, onClose}:SliderProps) {
 
     const [slideIndex, setSlideIndex] = useState(0);
 
-    const {images, fullDescription} = project;
+    const {images, fullDescription, link} = project;
 
     const slideCount = images.length;
 
@@ -73,7 +73,8 @@ export default function Slider ({project, onClose}:SliderProps) {
                             <button onClick = {showNextSlide} className="next__button slider__button" aria-label="Посмотреть следующий слайд"></button>
                         </div>
                     </div>  
-                    <p className="slider__description-full">{fullDescription}</p>  
+                    <p className="slider__description-full">{fullDescription}</p> 
+                    <a className='slider__link' href={link}>сылка на проект</a> 
                 </div>
             </div>
 
