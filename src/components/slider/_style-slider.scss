@@ -23,11 +23,7 @@
         align-items: center;
         border-radius: 50px 0 50px 0;
 
-        background: rgba(var(--color-white-rgb), 0.2);
-        box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
-                    0 0 20px rgba(var(--color-white-rgb), 0.5),
-                    inset 0 0 150px rgba(var(--color-black-rgb), 1);
-        border: 1px solid rgba(var(--color-black-rgb), 0.5);
+        @include neon-shadow;
         overflow: hidden;
 
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,7 +103,7 @@
         text-transform: var(--text-uppercase-uppercase);
         letter-spacing: 4px;
         text-align: center; 
-        color: var(--color-white);
+        color: var(--color-basic);
 
         @include mobile-landscape {
             @include text-xs;
@@ -139,7 +135,7 @@
         width: 60px;
         height: 60px;
         border-radius: 10px;
-        background-color: rgba(var(--color-black-rgb), 0.5);
+        background-color: rgba(var(--color-rgb-2), 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -161,7 +157,7 @@
         right: 5px;
         width: 40px;
         height: 40px;
-        background-color: rgba(var(--color-black-rgb), 0.5);
+        background-color: rgba(var(--color-rgb-2), 0.5);
         border: none;
         border-radius: 10px;
         cursor: pointer;
@@ -178,7 +174,7 @@
         width: 30px;
         height: 30px;
         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
+            to right, var(--color-accent-base), var(--color-accent-gradient)
          );
         mask: url('/icons/close.svg') no-repeat center/contain;
         -webkit-mask: url('/icons/close.svg') no-repeat center/contain;
@@ -190,10 +186,11 @@
         content: '';
         width: 50px;
         height: 50px;
-        background-color: rgba(var(--color-black-rgb), 0.5);
+        background-color: rgba(var(--color-rgb-2), 0.5);
         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
+            to right, var(--color-accent-base), var(--color-accent-gradient)
          );
+        @include neon-border-shadow;
         mask: url('/icons/arrow-left.svg') no-repeat center/contain;
         -webkit-mask: url('/icons/arrow-left.svg') no-repeat center/contain;
 
@@ -207,9 +204,9 @@
         content: '';
         width: 50px;
         height: 50px;
-        background-color: rgba(var(--color-black-rgb), 0.5);
+        background-color: rgba(var(--color-rgb-2), 0.5);
         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
+            to right, var(--color-accent-base), var(--color-accent-gradient)
          );
         mask: url('/icons/arrow-left.svg') no-repeat center/contain;
         -webkit-mask: url('/icons/arrow-right.svg') no-repeat center/contain;

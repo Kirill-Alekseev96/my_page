@@ -30,8 +30,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-base);
-    color: var(--color-white);
-    background-color: var(--color-black-50);
+    color: var(--color-basic);
+    background-color: var(--color-bg-body);
     overflow: hidden;
 
     @include laptop {
@@ -55,14 +55,13 @@ body {
 h1,h2,h3 {
     font-weight: var(--font-weight-bold);
     text-transform: var(--text-uppercase-uppercase);
-    color: var(--color-white);
+    color: var(--color-basic);
     margin: 0;
     padding: 0;
 }
 
 h1 {
     @include text-2xl;
-    color: var(--color-grey-toxic);
 }
 
 h2 {
@@ -75,7 +74,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-basic);
 }
 
 ul,
@@ -99,12 +98,12 @@ img {
     text-transform: uppercase;
     letter-spacing: 2px;
     @include text-xs;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-border-1);
     border-radius: 30px;
     padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-black);
-    box-shadow: 0 0 20px var(--color-grey-toxic), inset 0 0 20px var(--color-grey-toxic);
+    color: var(--color-basic);
+    background-color: var(--color-bg-surface);
+    @include neon-border-shadow;
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -119,15 +118,16 @@ img {
 }
 
 .button:hover {
-    background: var(--color-grey-toxic);
-    box-shadow: 0 0 20px var(--color-grey-toxic), 0 0 30px var(--color-grey-toxic);
-    color: var(--color-black);
+    background: var(--color-accent-gradient);
+    @include neon-border-shadow;
+    color: var(--color-basic-2);
 }
 
 .button-icon {
     width: 25px;
     height: 25px;
-    background-color: var(--color-grey-toxic);
+    background-color: var(--color-accent-gradient);
+    border: 2px solid var(--color-border-1);
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;

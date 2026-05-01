@@ -67,16 +67,22 @@
 /*Тени*/
 
 @mixin neon-shadow {
-    background: rgba(var(--color-white-rgb), 0.2);
-    box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
-                0 0 20px rgba(var(--color-white-rgb), 0.5),
-                inset 0 0 150px rgba(var(--color-black-rgb), 1);
+    background: rgba(var(--color-rgb-1), 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(var(--color-rgb-1), 0.3);
+    box-shadow: 0 0 15px rgba(var(--color-rgb-1), 0.8),
+    inset 0 0 150px rgba(var(--color-rgb-2), 0.5);
+}
+
+
+@mixin neon-border-shadow {
+    box-shadow: 0 0 20px var(--color-accent-gradient), inset 0 0 20px var(--color-accent-gradient);
 }
 
 /*Текст*/
 @mixin gradient-text {
     background-image: linear-gradient(
-        to right, var(--color-white), var(--color-grey-toxic)
+        to right, var(--color-accent-base), var(--color-accent-gradient)
         );
     background-clip: text;
     color: transparent;    

@@ -25,10 +25,7 @@
         border-radius: 25px;
         overflow: hidden;
         cursor: pointer;
-        background: rgba(var(--color-white-rgb), 0.2);
-        box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7), 
-                0 0 20px rgba(var(--color-white-rgb), 0.5),
-                inset 0 0 150px rgba(var(--color-black-rgb), 1);
+        @include neon-shadow;
         transition: transform 0.5s ease;
     }
 
@@ -54,11 +51,7 @@
 
     &__title {
         letter-spacing: 6px;
-        background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
-         );
-         background-clip: text;
-         color: transparent;
+        @include gradient-text;
          display: inline-block;
     }
 

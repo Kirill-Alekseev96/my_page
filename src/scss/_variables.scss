@@ -5,32 +5,7 @@
 */
 
 
-
 :root {
-    --color-white:  #FFFFFF;
-    --color-black:  #181818;
-    --color-black-50:  #222629;
-    --color-green: #d6d6d6d8;
-    --color-green-50: #f3f3ef;
-    --color-grey-toxic: #d1ff05;
-    --color-grey-50: #a6e44f;
-    --color-grey: #61892F;
-    --color-orange-40: #ffd000;
-    --color-orange: #cd5322;
-    --color-red: #7B001C;
-    --color-violet: #6D28D9;
-    --color-gold: #D4AF37;
-    --color-blue: #5e7dac;
-    --color-grey-toxic-rgb: 209, 255, 5;
-    --color-green-rgb: 214, 214, 214;
-    --color-white-rgb:  255, 255, 255;
-    --color-violet-rgb: 109, 40, 217;
-    --color-black-rgb: 28,28,28;
-    --color-black-rgb-50:  34, 38, 41;
-    --color-orange-rgb: 255,176,46;
-    --color-blue-rgb: 127,199,255;
-
-
     --font-family-base: 'Manrope', sans-serif;
     --font-family-baseA: 'Josefin Sans', sans-serif;
     --font-family-baseB: 'PlayfairDisplay', sans-serif;
@@ -38,4 +13,55 @@
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --text-uppercase-uppercase: uppercase;
+}
+
+
+:root[data-theme="dark"] {
+
+    --color-basic: #FFFFFF;
+    --color-basic-2: #181818;
+
+    --color-border-1: #FFFFFF;
+    --color-border-2: #181818;
+
+    --color-bg-element: #181818;
+    
+    --color-bg-input: #eceedf;
+    --color-bg-body: #222629;
+
+    --color-icon: #181818;
+    --color-bg-surface: #181818;
+
+    --color-accent-gradient: #d1ff05;
+    --color-accent-base: #ffffff;
+
+    --color-granules: #ffffff;
+
+    --color-rgb-1:  255, 255, 255;
+    --color-rgb-2: 28,28,28;
+}
+
+
+:root[data-theme="light"] {
+    --color-basic: #181818;
+    --color-basic-2: #FFFFFF;
+
+    --color-border-1: #dfb21d;
+    --color-border-2: #FFFFFF;
+
+    --color-bg-element: #7c6e65;
+    --color-bg-body: #F4EFE6;
+    
+    --color-bg-input: #eeeeee;
+
+    --color-icon: #181818;
+    --color-bg-surface: #ffffff;
+
+    --color-accent-gradient: #daaf23;
+    --color-accent-base: #daaf23;
+
+    --color-granules: #000000;
+
+    --color-rgb-1:  255, 255, 255;
+    --color-rgb-2: 28,28,28;
 }

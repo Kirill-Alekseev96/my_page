@@ -27,11 +27,9 @@
         padding: 50px;
         
         border-radius: 25px;
-        background: rgba(var(--color-white-rgb), 0.5);
-        box-shadow: 0 0 20px rgba(var(--color-white-rgb), 0.7), 
-                    0 0 20px rgba(var(--color-white-rgb), 0.5),
-                    inset 0 0 150px rgba(var(--color-black-rgb), 1);
-        border: 1px solid rgba(var(--color-black-rgb), 0.8);
+        @include neon-shadow;
+        background: rgba(var(--color-rgb-1), 0.5);
+        border: 1px solid rgba(var(--color-border-2), 0.8);
         overflow: hidden;
 
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -53,23 +51,19 @@
         text-align: center;
         margin: 20px 0;
         letter-spacing: 6px;
-         background-image: linear-gradient(
-            to right, var(--color-white), var(--color-grey-toxic)
-         );
-         background-clip: text;
-         color: transparent;
+        @include gradient-text;
     }
 
 
     &__item:hover {
         transform: translateY(-15px);
-        box-shadow: 0 0 40px rgba(var(--color-white-rgb), 0.5);
+        box-shadow: 0 0 40px rgba(var(--color-rgb-1), 0.5);
     }
     
 
     &__item-inner {
         position: relative;
-        color: var(--color-black);
+        color: #181818;
         text-align: center;
         font-weight: var(--font-weight-bold);
         cursor: pointer;
@@ -90,7 +84,7 @@
         bottom: 10px;
         left: 10px;
         height: 2px;
-        background-color: var(--color-black);
+        background-color: var(--color-icon);
         content: '';
     }
 
@@ -98,7 +92,7 @@
 
         width: 40px;
         height: 40px;
-        background-color: var(--color-black);
+        background-color: var(--color-icon);
         mask-size: contain;
         mask-repeat: no-repeat;
         mask-position: center;
@@ -112,12 +106,12 @@
 
     &__item:hover &__svg {
         transform: rotate(360deg);
-        background-color: var(--color-grey-toxic); 
+        background-color: var(--color-accent-gradient); 
         transition: transform 0.5s ease;
     }
 
     &__item:hover &__item-inner::before {
-        background-color: var(--color-grey-toxic); 
+        background-color: var(--color-accent-gradient); 
     }
 
     &__svg-html {

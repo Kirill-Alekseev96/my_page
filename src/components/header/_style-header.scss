@@ -2,7 +2,7 @@
 .header{
 
     width: 100%;
-    background-color: var(--color-black);
+    background-color: var(--color-bg-element);
     z-index: 2;
 
     &__container {
@@ -37,7 +37,7 @@
     }
 
     &__item:hover {
-        background-color: var(--color-white);
+        background-color: var(--color-basic);
 
         @include mobile-portrait {
             background-color: transparent;
@@ -46,10 +46,10 @@
     }
 
     &__item:hover &__link {
-        color: var(--color-black);  
+        color: var(--color-basic-2);  
         
         @include mobile-portrait {
-            color: var(--color-white);
+            color: var(--color-basic);
 
         }
     }
@@ -77,7 +77,7 @@
         bottom: 0;
         left: 20px;
         height: 4px;
-        background-color: var(--color-grey-toxic);
+        background-color: var(--color-accent-gradient);
         content: '';
 
         @include mobile-portrait {
@@ -87,11 +87,28 @@
     }
 
     &__theme-btn {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid var(--color-accent-gradient);
         border-radius: 50%;
-        flex-shrink:0;
+        flex-shrink:1;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    &__theme-btn::before {
+        display: block;
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-accent-gradient);
+        mask: url('/icons/dribbble.svg') no-repeat center/contain;
+        -webkit-mask: url('/icons/dribbble.svg') no-repeat center/contain;
+    }  
 }
 
 

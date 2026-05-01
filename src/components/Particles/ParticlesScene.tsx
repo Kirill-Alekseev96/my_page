@@ -1,10 +1,15 @@
 import Particles from './Particles';
 
-export default function ParticlesScene() {
+type ParticlesProps = {
+   color: string;
+};
+
+export default function ParticlesScene({color}:ParticlesProps) {
+
     return (
         <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -5, pointerEvents: 'none'  }}>
             <Particles
-                particleColors={["#ffd8a4"]}
+                particleColors={[color]}
                 particleCount={1000}
                 particleSpread={10}
                 speed={0.1}

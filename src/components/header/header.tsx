@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { PAGES } from "../../const";
 
-export default function Header () {
+type HeaderProps = {
+    toggleTheme: () => void;
+};
+
+export default function Header ({toggleTheme}: HeaderProps) {
 
     type NavLinkProps = {
         isActive: boolean;
@@ -26,7 +30,7 @@ export default function Header () {
                     </ul>
                 </nav>
                 
-                <button className="header__theme-btn button--dark"></button>
+                <button onClick = {toggleTheme} className="header__theme-btn button--dark"></button>
             </div>
         </header>
     )
