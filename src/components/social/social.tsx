@@ -21,7 +21,7 @@ function Social () {
                     </a>
                 </li>
                 <li className="social__item">
-                    <a className="social__link" href="https://web.telegram.org/k/#@ind1go3">
+                    <a className="social__link" href="https://t.me/ind1go3">
                         <button className="social__telegram-svg button-icon"></button>
                     </a>
                 </li>

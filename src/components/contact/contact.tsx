@@ -3,18 +3,20 @@ import emailjs from '@emailjs/browser';
 import { Example } from '../spinner/spinner-form';
 import { useLockScroll } from '../../hooks/useLockScroll';
 import { useEscapeClose } from '../../hooks/useEscapeClose';
+import { KEYS } from '../../keys';
+
 
 type ContactType = {
   onClose: () => void;
 };
+
 function Contact({onClose}:ContactType) {
     
     const [isLoading, setIsLoading] = useState(false); 
-    
 
-    const YOUR_PUBLIC_KEY:string = 'Wy6_ryLnjhWXKOZ0T';
-    const YOUR_SERVICE_ID:string = 'service_ip7eo26';
-    const YOUR_TEMPLATE_ID: string = 'template_jgk5mvn';
+    const YOUR_PUBLIC_KEY = KEYS.PUBLIC_KEY;
+    const YOUR_SERVICE_ID = KEYS.SERVICE_ID;
+    const YOUR_TEMPLATE_ID = KEYS.TEMPLATE_ID;
 
     const form = useRef<HTMLFormElement>(null);
 

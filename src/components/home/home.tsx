@@ -23,6 +23,16 @@ export default function Home () {
         setIsOpenContact(false);
     }, []);
 
+    const handleDownload = useCallback(() => {
+        const fileUrl = './files/rezume.pdf';
+  
+        // Создаем временную ссылку
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Резюме.А.К.pdf';
+        link.click();
+    }, []);
+
     return (
     <>
         {!isOpenContact ? (
@@ -36,13 +46,13 @@ export default function Home () {
                         Постоянно учусь новому и слежу за трендами, чтобы делать веб лучше и быстрее.
                     </p>
                     <div className="home__actions">
-                        <button className="home__button--download button">скачать</button>
+                        <button onClick={handleDownload} className="home__button--download button">скачать</button>
                         <button onClick={handleOpenContact} className="home__button--contact button">написать</button>
                         <MemorizedSocial/>
                     </div>
                 </div>
                 <div className="home__inner">
-                    <img className="home__image" src='/my_page/images/IMG_4786.png' alt="zxcc" />
+                    <img className="home__image" src='/my_page/images/IMG_4786.png' alt="my photo" />
                 </div>
             </section>
         ) : (

@@ -6,7 +6,7 @@ export function Example() {
         visible={true}
         height="50"
         width="50"
-        backgroundColor="var(--color-accent)"
+        backgroundColor="var(--color-accent-gradient)"
         ariaLabel="fidget-spinner-loading"
         wrapperStyle={{}}
         wrapperClass="fidget-spinner-wrapper"
